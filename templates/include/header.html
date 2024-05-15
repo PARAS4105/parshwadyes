@@ -1,13 +1,14 @@
-<div class="header-wrapper">
+<div class="header-wrapper" ng-class="{'black-header' : blackHeader}">
     <div class="header-container main-container">
         <div class="header-flex">
             <div class="header-logo">
                 <a href="{{base_url}}">
-                    <img src="assets/images/logo/logo.png" alt="">
+                    <img src="assets/images/logo/logo.png" class="black-logo" alt="">
+                    <img src="assets/images/logo/logo.png" class="white-logo" alt="">
                 </a>
             </div>
-            <div class="header-navigation-links link-fonts">
-                <ul>
+            <div class="header-navigation-links link-fonts hidden-xs hidden-sm">
+                <ul class="inner-flex">
                     <li>
                         <a href="" class="uppercase white-color" ng-class="{'active'  : activePath = '/' }">
                             Home
@@ -35,10 +36,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="header-btn">
+            <div class="header-btn hidden-xs hidden-sm">
                 <button class="gradient-btn uppercase">
                     Products <span class="secondary-color"> / </span> 10
                 </button>
+            </div>
+            <div class="header-btn visible-xs visible-sm">
+                <div class="menu ">
+                    <div class="bar top"></div>
+                    <div class="bar middle"></div>
+                    <div class="bar bottom"></div>
+                </div>
             </div>
         </div>
     </div>

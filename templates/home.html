@@ -1,25 +1,212 @@
 <div class="parshwadyes-main-wrapper">
-    <div class="parshwadyes-home-wrapper" id="parshwadyes-home-wrapper">
+    <div class="parshwadyes-home-wrapper inner-flex sect-gap" id="parshwadyes-home-wrapper">
         <section class="parshwadyes-home-section-one relative" id="parshwadyes-home-section-one">
-            <div class="banner-img">
-                <img src="https://dummyimage.com/1920x1080/000000/000000" alt="">
-            </div>
-            <div class="main-container">
-                <div class="relative">
-                    <div class="banner-text inner-flex small-gap alc text-center">
-                        <div class="banner-title ">
-                            <h1 class="white-color">Pigment Paste & Emulsions</h1>
+            <ks-swiper-container override-parameters="homeBannerSwiper">
+                <ks-swiper-slide ng-repeat="data in HomeBannerdata">
+                    <div class="banner-img h100">
+                        <img src="{{data.img}}" class="h100" alt="">
+                    </div>
+                    <div class="banner-pagination-container inner-flex alc">
+                        <div class="home-banner-pagination link-fonts" ng-if="$index < 10">
+                            <p class="white-color">
+                                0{{$index + 1}}
+                            </p>
                         </div>
+                        <div class="down-arrow">
+                            <img src="assets/images/icons/down-arrow.svg" alt="">
+                        </div>
+                    </div>
+                </ks-swiper-slide>
+
+            </ks-swiper-container>
+
+            <div class="banner-text inner-flex small-gap alc text-center">
+                <div class="banner-title ">
+                    <h1 class="white-color">Pigment Paste & Emulsions</h1>
+                </div>
+                <div class="section-subtitle">
+                    <h3 class="white-color">Our high quality pigment paste & emulsions are manufactured <br
+                            class="hidden-xs"> & designed to permanenetly dye. </h3>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="parshwadyes-home-section-two  relative" id="parshwadyes-home-section-two">
+            <div class="main-container">
+                <div class="home-common-grid inner-flex medium-mob-gap">
+                    <div class="inner-flex  w50">
+                        <div class="home-title section-smalltitle  flex-row alc">
+                            <span class="dot"></span>
+                            <h4 class="gray-color">About</h4>
+                        </div>
+
+                        <div class="section-title">
+                            <h2>The company with a
+                                good attitude</h2>
+                        </div>
+
                         <div class="section-subtitle">
-                            <h3 class="white-color">Our high quality  pigment paste  & emulsions are manufactured <br class="hidden-xs"> & designed  to permanenetly dye. </h3>
+                            <h3 class="">Today, Parshwanath Group Has emerged as a
+                                Leading Business Conglomerate in <br class="hidden-xs">
+                                Dyestuff Industry.</h3>
+                        </div>
+                    </div>
+                    <div class="inner-flex big-gap mlauto w50">
+
+                        <div class="flex-row medium-gap j-c-sb">
+                            <div class="inner-flex alc " ng-class="{'text-center' : isMobileScreen}">
+                                <div class="about-img">
+                                    <img src="https://www.dummyimage.com/80X80/c1c1c1/c1c1c1" alt="">
+                                </div>
+                                <div class="about-text section-content">
+                                    <p class="secondary-color uppercase"> QUALITY PRODUCTS </p>
+                                </div>
+                            </div>
+                            <div class="inner-flex alc" ng-class="{'text-center' : isMobileScreen}">
+                                <div class="about-img">
+                                    <img src="https://www.dummyimage.com/80X80/c1c1c1/c1c1c1" alt="">
+                                </div>
+                                <div class="about-text section-content">
+                                    <p class="secondary-color uppercase"> YEARS EXPERIENCE </p>
+                                </div>
+                            </div>
+                            <div class="inner-flex alc" ng-class="{'text-center' : isMobileScreen}">
+                                <div class="about-img">
+                                    <img src="https://www.dummyimage.com/80X80/c1c1c1/c1c1c1" alt="">
+                                </div>
+                                <div class="about-text section-content">
+                                    <p class="secondary-color uppercase"> 05 PRODUCTION UNITS </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <p class="gray-color">
+                                PARSHWANATH GROUP OF INDUSTRIES was incorporated in 1998 as a <br class="hidden-xs">
+                                small-scale dyestuff manufacturing unit Today, Parshwanath group has emerged
+                                as a leading business conglomerate in dyestuff industry, It's our experience that
+                                has enabled up to develop and maintain "State of Art" Infrastructure.
+                            </p>
+                        </div>
+                        <div class="about-btn wfc">
+                            <a href="about">
+                                <button class="gradient-btn  common-link-btn">
+                                    About us
+                                    <img src="assets/images/icons/rounded-diagonal-arrow.svg" class="btn-icon" alt="">
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
         </section>
+        <section class="parshwadyes-home-section-two  relative" id="parshwadyes-home-section-two">
+            <div class="main-container">
+                <div class="inner-flex big-gap ">
+                    <div class="two-col-grid  medium-mob-gap     homne-sect3 alend">
+                        <div class="inner-flex  ">
+                            <div class="home-title section-smalltitle  flex-row alc">
+                                <span class="dot"></span>
+                                <h4 class="gray-color">Products</h4>
+                            </div>
+
+                            <div class="section-title">
+                                <h2>Parshwanath <br>
+                                    dyestuff industries</h2>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <p class="gray-color">
+                                Due to our persistent efforts and motivation to succeed we have carved our
+                                niche in the respective arena of trade. Combined with zealous efforts,
+                                motivation and technical skills, the organization has a strong client base across
+                                the world.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="two-col-grid  alend">
+                        <div class="inner-flex  ">
+                            &nbsp;
+                        </div>
+                        <div class="about-btn wfc">
+                            <a href="dye-list">
+                                <button class="gradient-btn  common-link-btn">
+                                    View All
+                                    <img src="assets/images/icons/rounded-diagonal-arrow.svg" class="btn-icon" alt="">
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="main-container-fluid section-padding pb0 relative">
+                <div class="dyeSwiper">
+                    <ks-swiper-container override-parameters="dyeSwiper">
+                        <ks-swiper-slide ng-repeat="data in dyeList">
+                            <a href="dye/{{data.slug}}">
+                                <div class="dyeCard">
+                                    <div class="dyeImg">
+                                        <img src="{{data.img}}" alt="">
+                                    </div>
+                                    <div class="dyeText section-content flex-row alc">
+                                        <p>
+                                            {{data.name}}
+                                        </p>
+                                        <span>
+                                            <img src="assets/images/icons/diagonal-arrow.svg" class="hover-enable"
+                                                alt="">
+                                            <img src="assets/images/icons/diagonal-arrow-red.svg" class="hover-disable"
+                                                alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </ks-swiper-slide>
+                    </ks-swiper-container>
+                </div>
+                <div class="navigationFlex j-c-sb alc flex-row w100 ">
+                    <div class="swiper-button-prev dye-button-prev">
+                        <img src="assets/images/icons/swiper-arrow-left.svg" alt="">
+
+                    </div>
+                    <div class="swiper-button-next dye-button-next">
+                        <img src="assets/images/icons/swiper-arrow-right.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="parshwadyes-home-section-four relative" id="parshwadyes-home-section-four">
+            <div class="main-container home-sect4-text">
+                <div class=" inner-flex big-gap alc text-center">
+                    <div class="inner-flex medium-gap">
+
+                        <div class="banner-title ">
+                            <h1 class="white-color">Research & Development</h1>
+                        </div>
+                        <div class="section-subtitle">
+                            <h3 class="white-color">R&D prqgrams are designed to <br class="hidden-xs">
+                                achieve four objectives. </h3>
+                        </div>
+                    </div>
+                    <div class="section-content w50 m0auto">
+                        <p class="white-color">
+                            Research and development Improvements in quality by improving manufacturing
+                            technology and process. Low manufacturing costs through process
+                            improvement. Conduct exploratory research to develop new product lines and
+                            markets. Develop new products and processes that are environmentally
+                            responsible.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </div>
 </div>
 
-<div class="">
-    
-</div>

@@ -3,7 +3,7 @@ app = angular.module("parshwadyes", ['ngRoute', /*'ngIdle',*/ 'base64', 'ngStora
 
 app.$inject = ['SweetAlert'];
 
-var base_url = 'http://192.168.1.17/parshwadyes/';
+var base_url = 'http://192.168.1.31/parshwadyes/';
 
 app.config(['$locationProvider', '$routeProvider', '$validatorProvider', /*'AnalyticsProvider',*/ /*'socialProvider',*/
 	function ($locationProvider, $routeProvider, $validatorProvider /*AnalyticsProvider,*/ /*socialProvider*/) {
@@ -50,7 +50,14 @@ app.config(['$locationProvider', '$routeProvider', '$validatorProvider', /*'Anal
 		$routeProvider.when("/", {
 			templateUrl: "templates/home.html?ver=12-01-2023-v1",
 			controller: "homeController",
+			footerActive: true,
 			page_title: "",
+		})
+		$routeProvider.when("/contact", {
+			templateUrl: "templates/contact.html?ver=12-01-2023-v1",
+			controller: "contactController",
+			page_title: "",
+			blackHeader: true,
 		})
 
 			.otherwise({
@@ -82,6 +89,8 @@ app.run(function ($timeout, $rootScope, $location, $localStorage, $http, $window
 		$rootScope.page_description = current.$$route.page_description ? current.$$route.page_description : "";
 
 		$rootScope.page_flag = current.$$route.page_flag;
+		$rootScope.footerActive = current.$$route.footerActive;
+		$rootScope.blackHeader = current.$$route.blackHeader;
 
 	});
 
@@ -454,12 +463,297 @@ app.directive('starRating', function () {
 
 app.controller("MainController", function ($scope, $location, $rootScope, $timeout, $http, $localStorage, $routeParams, $window, $route, $base64, $timeout, $sce, $mdToast, $filter, $interval) {
 
-    $rootScope.year = new Date().getFullYear();
+	$rootScope.isMobileScreen = false;
+
+	if ($window.innerWidth <= 991) {
+		$rootScope.isMobileScreen = true;
+
+	}
+
+	$rootScope.year = new Date().getFullYear();
+
+
 
 })
 
 app.controller("homeController", function ($scope, $location, $rootScope, $timeout, $http, $localStorage, $routeParams, $window, $route, $base64, $timeout, $sce, $mdToast, $filter, $interval) {
 
 	console.log("Home controller");
+
+	$scope.homeBannerSwiper = {
+		observer: true,
+		observerParent: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		effect: "fade",
+		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: true,
+		},
+		pagination: {
+			el: ".swiper-pagination.home-banner-pagination",
+			type: "fraction",
+		},
+	}
+
+	$scope.HomeBannerdata = [
+		{
+			img: "https://www.dummyimage.com/1920x700/000000/000000"
+		},
+		{
+			img: "https://www.dummyimage.com/1920x700/c1c1c1/c1c1c1"
+		},
+	]
+
+	$scope.dyeList = [
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Reactive Dyes",
+			slug: "reactive-dyes",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Food & Lake Colors",
+			slug: "food-&-Lake-colors",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Direct Dyes ",
+			slug: "direct-Dyes ",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Acid Dyes",
+			slug: "acid-Dyes",
+
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Wood Stain Dyes",
+			slug: "wood-stain-dyes",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Pigment Powder",
+			slug: "pigment-powder",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Solvent Dyes",
+			slug: "solvent-dyes",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Pigment Paste & Emulsions",
+			slug: "pigment-paste-&-emulsions",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Titanium Oxide",
+			slug: "titanium-oxide",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Dyes Intermediate",
+			slug: "dyes-intermediate",
+		},
+
+	]
+
+	$scope.dyeSwiper = {
+		observer: true,
+		observerParent: true,
+		slidesPerView: 6,
+		slidesOffsetBefore: 90,
+		slidesOffsetAfter: 90,
+		spaceBetween: 10,
+		navigation: {
+			prevEl: ".swiper-button-prev.dye-button-prev",
+			nextEl: ".swiper-button-next.dye-button-next",
+		},
+
+		breakpoints: {
+			767: {
+
+				slidesPerView: 1.5,
+				slidesOffsetBefore: 0,
+				slidesOffsetAfter: 0,
+
+			}
+		}
+	}
+
+})
+
+app.controller("contactController", function ($scope, $location, $rootScope, $timeout, $http, $localStorage, $routeParams, $window, $route, $base64, $timeout, $sce, $mdToast, $filter, $interval) {
+
+	console.log("Contact controller");
+
+	$scope.TabPanalData = [
+		{
+
+			catagory: "Reactive Dyes",
+			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contactPerson: [
+				{
+					name: "Mr. Jitendra Rakholiya",
+					phone: "<a href=\"tel:+919909903636\">+91-990-990-3636</a>",
+					email: "  <a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
+				},
+				{
+					name: "Ms. Sonal Modi (Marketing Department)",
+					phone: "<a href=\"tel:+919979874744\">+91-997-987-4744</a>",
+					email: "<a href=\"mailto:sonal.modi@parshwadyes.com\">sonal.modi@parshwadyes.com</a>"
+				},
+			]
+		},
+
+		{
+			catagory: "Food & Lake Colors",
+			contentData: "<div> <p> <a href=\"\">Plot No. 452/453, Phase-II, G.I.D.C, Vatva, Ahmedabad - 382445 (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940085400\"> +(91)-(79)-40085400 </a> / <a href=\"tel:+917940085400\"> 01 </a> / <a href=\"tel:+917940085400\"> 02 </a> </p> </div>",
+			contactPerson: [
+				{
+					name: "Mr. Arun Agarwal (Domestic Market)",
+					phone: "<a href=\"tel:+919327066725\">+91-932-706-6725</a>",
+					email: "  <a href=\"mailto:sales1@parshwadyes.com\">sales1@parshwadyes.com</a>"
+				},
+				{
+					name: "Mr. Devesh Marvania (International Market)",
+					phone: "<a href=\"tel:+918108589555\">+91-810-858-9555</a>",
+					email: "<a href=\"mailto:export@parshwadyes.com\">export@parshwadyes.com</a>"
+				},
+			]
+		},
+		{
+			catagory: "Direct Dye",
+			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contactPerson: [
+				{
+					name: "Mr. Jitendra Rakholiya",
+					phone: "<a href=\"tel:+919909903636\">+91-990-990-3636</a>",
+					email: "  <a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
+				},
+				{
+					name: "Ms. Sonal Modi (Marketing Department)",
+					phone: "<a href=\"tel:+919979874744\">+91-997-987-4744</a>",
+					email: "<a href=\"mailto:sonal.modi@parshwadyes.com\">sonal.modi@parshwadyes.com</a>"
+				},
+			]
+		},
+		{
+			catagory: "Acid Dyes Manufacturer ",
+			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contactPerson: [
+				{
+					name: "Mr. Jitendra Rakholiya",
+					phone: "<a href=\"tel:+919909903636\">+91-990-990-3636</a>",
+					email: "  <a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
+				},
+				{
+					name: "Ms. Sonal Modi (Marketing Department)",
+					phone: "<a href=\"tel:+919979874744\">+91-997-987-4744</a>",
+					email: "<a href=\"mailto:sonal.modi@parshwadyes.com\">sonal.modi@parshwadyes.com</a>"
+				},
+			]
+		},
+		{
+			catagory: "Wood Stain Dyes",
+			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contactPerson: [
+				{
+					name: "Mr. Jitendra Rakholiya",
+					phone: "<a href=\"tel:+919909903636\">+91-990-990-3636</a>",
+					email: "  <a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
+				},
+				{
+					name: "Ms. Sonal Modi (Marketing Department)",
+					phone: "<a href=\"tel:+919979874744\">+91-997-987-4744</a>",
+					email: "<a href=\"mailto:sonal.modi@parshwadyes.com\">sonal.modi@parshwadyes.com</a>"
+				},
+			]
+		},
+		{
+			catagory: "Pigment Powder Manufacturer",
+			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contactPerson: [
+				{
+					name: "Mr. Jitendra Rakholiya",
+					phone: "<a href=\"tel:+919909903636\">+91-990-990-3636</a>",
+					email: "  <a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
+				},
+				{
+					name: "Ms. Sonal Modi (Marketing Department)",
+					phone: "<a href=\"tel:+919979874744\">+91-997-987-4744</a>",
+					email: "<a href=\"mailto:sonal.modi@parshwadyes.com\">sonal.modi@parshwadyes.com</a>"
+				},
+			]
+		},
+		{
+			catagory: "Pigment",
+			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contactPerson: [
+				{
+					name: "Mr. Jitendra Rakholiya",
+					phone: "<a href=\"tel:+919909903636\">+91-990-990-3636</a>",
+					email: "  <a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
+				},
+				{
+					name: "Ms. Sonal Modi (Marketing Department)",
+					phone: "<a href=\"tel:+919979874744\">+91-997-987-4744</a>",
+					email: "<a href=\"mailto:sonal.modi@parshwadyes.com\">sonal.modi@parshwadyes.com</a>"
+				},
+			]
+		},
+		{
+			catagory: "Powder Solvent",
+			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contactPerson: [
+				{
+					name: "Mr. Jitendra Rakholiya",
+					phone: "<a href=\"tel:+919909903636\">+91-990-990-3636</a>",
+					email: "  <a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
+				},
+				{
+					name: "Ms. Sonal Modi (Marketing Department)",
+					phone: "<a href=\"tel:+919979874744\">+91-997-987-4744</a>",
+					email: "<a href=\"mailto:sonal.modi@parshwadyes.com\">sonal.modi@parshwadyes.com</a>"
+				},
+			]
+		},
+		{
+			catagory: "Titanium Dioxide",
+			contentData: "<div> <p> <a href=\"\">Plot No. 443, G.I.D.C. Estate, Phase - 2, Vatva, Ahmedabad - 382 445 Gujarat, (INDIA).</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40084607 </a> / <a href=\"tel:+919979874747\"> +(91)-(99)-79874747</a> </a> </p> </div> <div><p><a href=\"mailto:info@shubhlaxmiindustries.in\">info@shubhlaxmiindustries.in</a> </p> </div>",
+			contactPerson: [
+				{
+					name: "Mr. Jitendra Rakholiya",
+					phone: "<a href=\"tel:+919909903636\">+91-990-990-3636</a>",
+					email: "  <a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
+				},
+				{
+					name: "Ms. Sonal Modi (Marketing Department)",
+					phone: "<a href=\"tel:+919979874744\">+91-997-987-4744</a>",
+					email: "<a href=\"mailto:sonal.modi@parshwadyes.com\">sonal.modi@parshwadyes.com</a>"
+				},
+				{
+					name: "Mr. Shivkumar",
+					phone: "<a href=\"tel:+919979874711\">+91-997-987-4711</a>",
+					email: "<a href=\"mailto:sales1@parshwadyes.com\">sales1@parshwadyes.com</a>"
+				},
+			]
+		},
+		{
+			catagory: "Dyes Pigment Paste",
+			contentData: "<div> <p> <a href=\"\">Plot No. 443, G.I.D.C. Estate, Phase - 2, Vatva, Ahmedabad - 382 445 Gujarat, (INDIA).</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40084607 </a> / <a href=\"tel:+919979874747\"> +(91)-(99)-79874747</a> </a> </p> </div> <div><p><a href=\"mailto:info@shubhlaxmiindustries.in\">info@shubhlaxmiindustries.in</a> </p> </div>",
+
+		},
+
+	]
+
+
+	$scope.tabObj = $scope.TabPanalData[0];
+	$scope.contactClick = function (data) {
+		$scope.tabObj = data;
+	};
 
 })

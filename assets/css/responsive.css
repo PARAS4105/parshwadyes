@@ -1,14 +1,156 @@
 @media only screen and (max-width: 1680px) {}
 
-@media only screen and (max-width: 1366px) {}
+@media only screen and (max-width: 1440px) {
+    html {
+        font-size: 14px;
+    }
 
-@media only screen and (max-width: 1152px) {}
+    .footer-main-title h2 {
+        font-size: 10rem;
+    }
+}
 
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1366px) {
+    .section-title h1, .section-title h2 {
+        font-size: 4.5rem;
+        line-height: 1.2;
+    }
 
-@media only screen and (max-width: 991px) {}
+    .section-content span, .section-content p {
+        font-size: 1.2rem;
+    }
 
-@media only screen and (max-width: 767px) {}
+    .footer-main-title h2 {
+        font-size: 9rem;
+    }
+
+    .footer-quick-link>div::after {
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .main-container {
+        width: 90%;
+    }
+
+    html {
+        font-size: 12px;
+    }
+
+    .footer-main-title h2 {
+        font-size: 10rem;
+    }
+
+    .w50 {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1152px) {
+    .footer-main-title h2 {
+        font-size: 9rem;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer-main-title h2 {
+        font-size: 8rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .banner-title h1, .banner-title h2 {
+        font-size: 5rem;
+    }
+
+    .w50 {
+        width: 100%;
+    }
+
+    .two-col-grid {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .footer-main-title h2 {
+        font-size: 6rem;
+    }
+
+    .big-gap {
+        gap: 3rem;
+    }
+
+    .medium-mob-gap {
+        gap: var(--medium-gap-size)
+    }
+
+    .flex-row-mob {
+        display: flex;
+        flex-direction: row;
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .footer-inquiry-tab {
+        flex-direction: column;
+
+    }
+
+    .footer-quick-link {
+        flex-wrap: wrap;
+
+    }
+
+    .footer-quick-link>div {
+        flex-basis: 47%;
+    }
+
+    .footer-quick-link>div:last-child {
+        flex-basis: 100%;
+    }
+
+    .banner-title h1, .banner-title h2 {
+        font-size: 4rem;
+    }
+
+    .section-title h1, .section-title h2 {
+        font-size: 3rem;
+
+    }
+
+    .section-subtitle h3, .section-subtitle h4 {
+        font-size: 1.75rem;
+    }
+
+    .main-container {
+        width: 95%;
+    }
+
+    .footer-main-title h2 {
+        font-size: 5rem;
+    }
+
+    .sect-gap {
+        gap: 5rem;
+    }
+
+    .footer-container.footerActive {
+        margin: -20svh auto 1rem auto;
+    }
+
+    .footer-container {
+        margin: 1rem auto;
+    }
+
+    .header-wrapper {
+        padding: 1.5rem 0;
+    }
+
+}
 
 @media only screen and (max-width: 600px) {}
 
