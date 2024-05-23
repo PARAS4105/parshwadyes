@@ -59,7 +59,39 @@ app.config(['$locationProvider', '$routeProvider', '$validatorProvider', /*'Anal
 			page_title: "",
 			blackHeader: true,
 		})
+		$routeProvider.when("/about", {
+			templateUrl: "templates/about.html?ver=12-01-2023-v1",
+			controller: "aboutController",
+			footerActive: true,
+			page_title: "",
 
+		})
+		$routeProvider.when("/dyes", {
+			templateUrl: "templates/list.html?ver=12-01-2023-v1",
+			controller: "listController",
+			page_title: "",
+			blackHeader: true,
+		})
+		$routeProvider.when("/quality", {
+			templateUrl: "templates/quality.html?ver=12-01-2023-v1",
+			controller: "qualityController",
+			page_title: "",
+			blackHeader: true,
+		})
+		// $routeProvider.when("/table", {
+		// 	templateUrl: "templates/table.html?ver=12-01-2023-v1",
+		// 	controller: "tableController",
+		// 	page_title: "",
+		// 	blackHeader: true,
+		// })
+
+		$routeProvider.when("/dyes/:slug", {
+			templateUrl: "templates/products/detail.html?ver=12-01-2023-v1",
+			controller: "detailController",
+			page_title: "",
+			blackHeader: true,
+
+		})
 			.otherwise({
 				redirectTo: "/"
 			});
@@ -473,6 +505,102 @@ app.controller("MainController", function ($scope, $location, $rootScope, $timeo
 	$rootScope.year = new Date().getFullYear();
 
 
+	$rootScope.$storage = $localStorage.$default({
+		inquryList: [],
+	})
+
+	$rootScope.headerScroll = function () {
+
+
+		var $window = $(window);
+		var nav = $(".header-wrapper");
+
+		// console.log($window)
+
+		$window.on("scroll", function (e) {
+			var scrollTop = $window.scrollTop();
+			if (scrollTop <= 80) {
+				nav.removeClass("webmenu_hidden");
+				prev = 0;
+			} else {
+				nav.toggleClass("webmenu_hidden", scrollTop > prev);
+				prev = scrollTop;
+			}
+		});
+
+		$(window).scroll(function () {
+			var scroll = $(window).scrollTop();
+			if (scroll > 100) {
+				$(".header-wrapper").addClass("header_change");
+			} else {
+				$(".header-wrapper").removeClass("header_change");
+			}
+		});
+	}
+
+
+	$rootScope.headerScroll();
+
+	$rootScope.productList = [];
+	$rootScope.producttDetailObj = {};
+	$rootScope.projectLoad = false;
+	$rootScope.List = function () {
+		if ($rootScope.projectLoad == false) {
+
+			$rootScope.projectLoad = true;
+
+			$http({
+				url: base_url + "productlist.json",
+			}).then(function successCallback(response) {
+				response = response.data
+
+				$rootScope.productList = response.list;
+				console.log($rootScope.productList);
+
+
+				// angular.forEach($rootScope.productList, function (product) { 
+				// 	angular.forEach(product.tableData, function (tableData) { 
+				// 		$http({
+				// 			url: base_url + tableData.table,
+				// 		}).then(function successCallback(responseIn) {
+				// 			tableData.table = responseIn.data;
+
+				// 		}, function errorCallback(response) {
+				// 			console.log("Oops.... ")
+				// 		})
+				// 	})
+				//  })
+				//  console.log($rootScope.productList, "PSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
+
+
+			}, function errorCallback(response) {
+				console.log("Oops.... ")
+			})
+
+		}
+	}
+
+
+	$rootScope.List();
+
+
+	$scope.mobileMenuActive = false;
+	$scope.mobileMenuClick = function () {
+		if ($scope.mobileMenuActive == false) {
+			$scope.mobileMenuActive = true;
+		}
+		else {
+			$scope.mobileMenuActive = false;
+		}
+	}
+	$scope.mobileMenuClickClose = function () {
+		$scope.mobileMenuActive = false;
+	}
+
+
+
+
+
 
 })
 
@@ -499,31 +627,35 @@ app.controller("homeController", function ($scope, $location, $rootScope, $timeo
 
 	$scope.HomeBannerdata = [
 		{
-			img: "https://www.dummyimage.com/1920x700/000000/000000"
+			img: "assets/images/homepage/homepage-banner.jpg"
 		},
 		{
-			img: "https://www.dummyimage.com/1920x700/c1c1c1/c1c1c1"
+			img: "assets/images/homepage/5-Wood-Stain-Dyes.jpg"
+		},		
+		{
+			img: "assets/images/homepage/7-Solvent-Dyes.jpg"
 		},
+
 	]
 
 	$scope.dyeList = [
 		{
-			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			img: "assets/images/homepage/1-product-homepage.jpg",
 			name: "Reactive Dyes",
 			slug: "reactive-dyes",
 		},
 		{
-			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			img: "assets/images/homepage/2-product-homepage.jpg",
 			name: "Food & Lake Colors",
 			slug: "food-&-Lake-colors",
 		},
 		{
-			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			img: "assets/images/homepage/3-product-homepage.jpg",
 			name: "Direct Dyes ",
 			slug: "direct-Dyes ",
 		},
 		{
-			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			img: "assets/images/homepage/4-product-homepage.jpg",
 			name: "Acid Dyes",
 			slug: "acid-Dyes",
 
@@ -580,6 +712,12 @@ app.controller("homeController", function ($scope, $location, $rootScope, $timeo
 				slidesOffsetBefore: 0,
 				slidesOffsetAfter: 0,
 
+			},
+			1024: {
+
+				slidesPerView: 2.5,
+				slidesOffsetBefore: 0,
+				slidesOffsetAfter: 0,
 			}
 		}
 	}
@@ -594,6 +732,7 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		{
 
 			catagory: "Reactive Dyes",
+			imgs: "assets/images/contact/contact-product-1.jpg",
 			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
@@ -611,6 +750,8 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 
 		{
 			catagory: "Food & Lake Colors",
+			imgs: "assets/images/contact/contact-product-2.jpg",
+
 			contentData: "<div> <p> <a href=\"\">Plot No. 452/453, Phase-II, G.I.D.C, Vatva, Ahmedabad - 382445 (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940085400\"> +(91)-(79)-40085400 </a> / <a href=\"tel:+917940085400\"> 01 </a> / <a href=\"tel:+917940085400\"> 02 </a> </p> </div>",
 			contactPerson: [
 				{
@@ -627,6 +768,7 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		},
 		{
 			catagory: "Direct Dye",
+			imgs: "assets/images/contact/contact-product-3.jpg",
 			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
@@ -643,6 +785,7 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		},
 		{
 			catagory: "Acid Dyes Manufacturer ",
+			imgs: "assets/images/contact/contact-product-4-2.jpg",
 			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
@@ -659,6 +802,8 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		},
 		{
 			catagory: "Wood Stain Dyes",
+			imgs: "assets/images/contact/contact-product-5.jpg",
+
 			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
@@ -675,6 +820,8 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		},
 		{
 			catagory: "Pigment Powder Manufacturer",
+			imgs: "assets/images/contact/contact-product-6.jpg",
+
 			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
@@ -691,12 +838,14 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		},
 		{
 			catagory: "Pigment",
+			imgs: "assets/images/contact/contact-product-7.jpg",
+
 			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Jitendra Rakholiya",
 					phone: "<a href=\"tel:+919909903636\">+91-990-990-3636</a>",
-					email: "  <a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
+					email: "<a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
 				},
 				{
 					name: "Ms. Sonal Modi (Marketing Department)",
@@ -707,12 +856,14 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		},
 		{
 			catagory: "Powder Solvent",
+			imgs: "assets/images/contact/contact-product-1.jpg",
+
 			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Jitendra Rakholiya",
 					phone: "<a href=\"tel:+919909903636\">+91-990-990-3636</a>",
-					email: "  <a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
+					email: "<a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
 				},
 				{
 					name: "Ms. Sonal Modi (Marketing Department)",
@@ -723,12 +874,14 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		},
 		{
 			catagory: "Titanium Dioxide",
+			imgs: "assets/images/contact/contact-product-1.jpg",
+
 			contentData: "<div> <p> <a href=\"\">Plot No. 443, G.I.D.C. Estate, Phase - 2, Vatva, Ahmedabad - 382 445 Gujarat, (INDIA).</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40084607 </a> / <a href=\"tel:+919979874747\"> +(91)-(99)-79874747</a> </a> </p> </div> <div><p><a href=\"mailto:info@shubhlaxmiindustries.in\">info@shubhlaxmiindustries.in</a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Jitendra Rakholiya",
 					phone: "<a href=\"tel:+919909903636\">+91-990-990-3636</a>",
-					email: "  <a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
+					email: "<a href=\"mailto:inquiry@parshwadyes.com\">inquiry@parshwadyes.com</a>"
 				},
 				{
 					name: "Ms. Sonal Modi (Marketing Department)",
@@ -744,6 +897,8 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		},
 		{
 			catagory: "Dyes Pigment Paste",
+			imgs: "assets/images/contact/contact-product-1.jpg",
+
 			contentData: "<div> <p> <a href=\"\">Plot No. 443, G.I.D.C. Estate, Phase - 2, Vatva, Ahmedabad - 382 445 Gujarat, (INDIA).</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40084607 </a> / <a href=\"tel:+919979874747\"> +(91)-(99)-79874747</a> </a> </p> </div> <div><p><a href=\"mailto:info@shubhlaxmiindustries.in\">info@shubhlaxmiindustries.in</a> </p> </div>",
 
 		},
@@ -756,4 +911,270 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		$scope.tabObj = data;
 	};
 
+
+	$scope.contact_validate = {
+
+		rules: {
+
+			name: {
+				required: true,
+			},
+			email: {
+				required: true,
+				email: true,
+			},
+			contact: {
+				required: true
+			},
+
+
+		},
+
+		messages: {
+
+			name: {
+				required: "Please enter name."
+			},
+			email: {
+				required: "Please enter email."
+			},
+			contact: {
+				required: "Please enter mobile number."
+			},
+
+
+		}
+	}
+	$scope.isInquiry = false;
+	$scope.contactObj = {};
+	$scope.submitinquiry = function (form) {
+		if (form.validate() && $scope.isInquiry == false) {
+			$scope.isInquiry = true;
+			$rootScope.$storage.inquryList.push($scope.contactObj);
+			$scope.isInquiry = false;
+			$scope.contactObj = {};
+
+
+			// $http({
+			// 	method: "POST",
+			// 	data: $scope.contactObj,
+
+			// }).then(function sucessCallback(response) {
+			// 	response = response.data;
+			// 	if (response.succcess == 1) {
+			// 		console.log(response);
+			// 		$scope.contactObj = {};
+			// 		$scope.isInquiry = false;
+
+			// 	}
+			// 	else {
+			// 		$scope.isInquiry = false;
+			// 		$scope.contactObj = {};
+			// 	}
+
+
+			// }, function errorCallback(response) {
+			// 	$scope.isInquiry = false;
+			// 	$scope.contactObj = {};
+			// 	console.log(response.message);
+
+			// })
+
+
+		}
+	}
+
+
 })
+
+
+app.controller("aboutController", function ($scope, $location, $rootScope, $timeout, $http, $localStorage, $routeParams, $window, $route, $base64, $timeout, $sce, $mdToast, $filter, $interval) {
+
+	console.log("About Controller");
+
+
+	$scope.locationData = [
+		{
+			name: "Parshwanath dyestuff Industries",
+			unitData: "(unit of reactive dyes & Solvent dyes)",
+			addressData: "Plot No. 1/5616-5617,<br> phase-2, G.I.D.C., Vatva, <br>Ahmedabad-382445 (INDIA)"
+		},
+		{
+			name: "Parshwanath colour chem",
+			unitData: "(unit of food colour & lake colour)",
+			addressData: "Plot No.452/453,<br> phase-2, G.I.D.C., Vatva, <br> Ahmedabad-382445 (INDIA)"
+		},
+		{
+			name: "Shubhlaxmi Industries",
+			unitData: "(unit of dyes intermediate)",
+			addressData: "Plot No.443/444,<br> phase-2, G.I.D.C., Vatva, <br> Ahmedabad-382445 (INDIA)"
+
+		},
+		{
+			name: "Shanghai colour chem",
+			unitData: "(unit of acid dyes & direct dyes)",
+			addressData: "Plot No. C-1/88/5,<br>phase-1, G.I.D.C., Vatva,<br> Ahmedabad-382445 (INDIA)"
+
+		},
+		{
+			name: "Rushvi fine chem pvt. Ltd.",
+			unitData: "(unit of pigment paste, pigment powder, pigment emulsion & titanium dioxide)",
+			addressData: "Plot No. A/2/481-482, <br> phase-2, G.I.D.C., Vatva, <br> Ahmedabad-382445 (INDIA)"
+
+		},
+
+
+
+	]
+	$scope.aboutSwiper = {
+		slidesPerView: 3,
+		spaceBetween: 10,
+		pagination: {
+			el: ".swiper-pagination.tagline_swiper-pagination",
+			dynamicBullets: true,
+			clickable: true,
+
+		},
+		breakpoints: {
+			767: {
+				slidesPerView: 1.5,
+				spaceBetween: 10,
+			},
+		}
+	}
+
+
+})
+app.controller("listController", function ($scope, $location, $rootScope, $timeout, $http, $localStorage, $routeParams, $window, $route, $base64, $timeout, $sce, $mdToast, $filter, $interval) {
+
+	console.log("List Controller");
+
+
+})
+app.controller("detailController", function ($scope, $location, $rootScope, $timeout, $http, $localStorage, $routeParams, $window, $route, $base64, $timeout, $sce, $mdToast, $filter, $interval) {
+
+	console.log("Detail Controller");
+
+	$scope.productSlug = $routeParams.slug;
+
+
+	$timeout(() => {
+
+		$rootScope.producttDetailObj = $rootScope.productList.find((product) => {
+
+			if ($scope.productSlug == product.slug) {
+
+				// return product;
+
+
+				angular.forEach(product.tableData, function (tableData) {
+					$http({
+						url: base_url + tableData.table,
+					}).then(function successCallback(responseIn) {
+						tableData.table = responseIn.data;
+
+					}, function errorCallback(responseIn) {
+						console.log("Oops.... ")
+					})
+				})
+
+				//  console.log($rootScope.productList, "PSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
+
+				return product;
+
+			}
+
+		});
+		console.log($rootScope.producttDetailObj);
+
+	}, 1000);
+
+	$scope.TabPanalData = [
+		{
+			id: "Reactive_Cold_Dyes",
+			catagory: "Reactive Cold Dyes",
+
+		},
+		{
+			id: "Reactive_HE_Dyes",
+			catagory: "Reactive HE Dyes",
+
+		},
+		{
+			catagory: "Reactive Hot Dyes",
+
+		},
+		{
+			catagory: "Reactive ME Dyes",
+
+		},
+		{
+			catagory: "Reactive Vinyl Sulphone",
+
+		},
+		// {
+		// 	catagory: "Base Dyes",
+
+		// },
+		{
+			catagory: "Reactive Printing Dyes",
+
+		},
+	]
+	$scope.tabObj = $scope.TabPanalData[0];
+	$scope.tabClick = function (data) {
+		$scope.tabObj = data;
+	};
+
+
+	$scope.scrollToDiv = function (div) {
+		$('html, body').animate({
+			scrollTop: Math.round($("#" + div).offset().top - 150)
+		}, 500);
+
+	}
+
+
+	$scope.HomeBannerdata = [
+		{
+			title : "Reactive Dyes Manufracturer",
+			img: "assets/images/homepage/homepage-banner.jpg"
+		},
+		{	
+			title : "Reactive Dyes Manufracturer",
+			img: "assets/images/homepage/5-Wood-Stain-Dyes.jpg"
+		},		
+		{
+			title : "Reactive Dyes Manufracturer",
+			img: "assets/images/homepage/7-Solvent-Dyes.jpg"
+		},
+	]
+	$scope.homeBannerSwiper = {
+		observer: true,
+		observerParent: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		effect: "fade",
+		loop: true,
+		// autoplay: {
+		// 	delay: 5000,
+		// 	disableOnInteraction: true,
+		// },
+		pagination: {
+			el: ".swiper-pagination.home-banner-pagination",
+			type: "fraction",
+		},
+	}
+
+})
+
+app.controller("qualityController", function ($scope, $location, $rootScope, $timeout, $http, $localStorage, $routeParams, $window, $route, $base64, $timeout, $sce, $mdToast, $filter, $interval) {
+
+	console.log("Quality controller");
+
+})
+
+
+
+
+

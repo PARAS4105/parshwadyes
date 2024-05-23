@@ -1,0 +1,43 @@
+{
+    "list": [
+        {
+            "slug": "reactive-dyes",
+            "name": "Reactive Dyes",
+            "title": "Reactive Dyes Manufracturer",
+            "shortDiscription" : "Our high quality reactive dyes are manufactured  <br> & designed to permanently dye.",
+            "discription": "Parshwanath Group of Industries is a Leading Reactive Dyes Manufacturer, Supplier & Exporters in Brazil, Vietnam, Indonesia. Reactive dyes are a class of highly coloured organic substances, primarily used for tinting textiles, that attach themselves to their substrates by a chemical reaction that forms a covalent bond between the molecule of dye and that of the fibre. The dyestuff thus becomes a part of the fibre and is much less likely to be removed by washing than are dyestuffs that adhere by adsorption. <br> <br> The first fibre reactive dyes were designed for cellulose fibres, and they are still used mostly in this way. There are also commercially available fibre reactive dyes for protein and polyamide fibres. In theory, fibre reactive dyes have been developed for other fibres, but these are not yet practical commercially. The dyes contain a reactive group that, when applied to a fibre in a weakly alkaline dyebath, form a chemical bond with the fibre. Reactive dyes can also be used to dye wool and nylon, in the latter case they are applied under weakly acidic conditions. <br> <br> The most important characteristic of reactive dyes is the formation of covalent bonds with the substrate to be coloured, i.e. the dye forms a chemical bond with cellulose, which is the main component of cotton fibers. <br> <br> Fiber reactive dyes are the most permanent of all dye types. Unlike other dyes, it actually forms a covalent bond with the cellulose or protein molecule. Once the bond is formed, what you have is one molecule, as the dye molecule has become an actual part of the cellulose fiber molecule. No wonder you can safely wash a garment that has been dyed in bright fiber reactive colours with white clothing, a hundred times, without endangering the whites in the least - even if it is all different bright colours, or even solid black! In contrast to all other dyes the reactive dyes bind chemically to the textile fibres, significantly improving the product's colour stability and washability. Thus reactive dying of cotton is currently the most widespread textile dying process in the world.",
+            "categoryArray": [
+                {
+                    "category": "REACTIVE COLD DYES"
+                },
+                {
+                    "category": "REACTIVE HE DYES"
+                },
+                {
+                    "category": "REACTIVE HOT DYES"
+                },
+                {
+                    "category": "REACTIVE ME DYES"
+                },
+                {
+                    "category": "REACTIVE VINYL SULPHONE BASE DYE"
+                },
+                {
+                    "category": "REACTIVE PRINTING DYES"
+                }
+            ],
+            "tableData" : [
+                {
+                    "category": "REACTIVE COLD DYES",
+                    "discription" : "Reactive dyes are a class of highly coloured organic substances, primarily used for tinting textiles, that attach themselves to their substrates by a chemical reaction that forms a covalent bond between the molecule of dye and that of the fibre. The dyestuff thus becomes a part of the fibre and is much less likely to be removed by washing than are dyestuffs that adhere by adsorption. <br> <br> The first fibre reactive dyes were designed for cellulose fibres, and they are still used mostly in this way. There are also commercially available fibre reactive dyes for protein and polyamide fibres. In theory, fibre reactive dyes have been developed for other fibres, but these are not yet practical commercially. The dyes contain a reactive group that, when applied to a fibre in a weakly alkaline dyebath, form a chemical bond with the fibre. Reactive dyes can also be used to dye wool and nylon, in the latter case they are applied under weakly acidic conditions. <br> <br> The most important characteristic of reactive dyes is the formation of covalent bonds with the substrate to be coloured, i.e. the dye forms a chemical bond with cellulose, which is the main component of cotton fibers. <br> <br> Fiber reactive dyes are the most permanent of all dye types. Unlike other dyes, it actually forms a covalent bond with the cellulose or protein molecule. Once the bond is formed, what you have is one molecule, as the dye molecule has become an actual part of the cellulose fiber molecule. No wonder you can safely wash a garment that has been dyed in bright fiber reactive colours with white clothing, a hundred times, without endangering the whites in the least - even if it is all different bright colours, or even solid black! In contrast to all other dyes the reactive dyes bind chemically to the textile fibres, significantly improving the product's colour stability and washability. Thus reactive dying of cotton is currently the most widespread textile dying process in the world.",
+                    "table" : "Products/reactive-dyes/json/reactive-cold-dyes.json"
+                },
+                {
+                    "category": "REACTIVE HE DYES",
+                    "discription" : "Reactive dyes are a class of highly coloured organic substances, primarily used for tinting textiles, that attach themselves to their substrates by a chemical reaction that forms a covalent bond between the molecule of dye and that of the fibre. The dyestuff thus becomes a part of the fibre and is much less likely to be removed by washing than are dyestuffs that adhere by adsorption. <br> <br> The first fibre reactive dyes were designed for cellulose fibres, and they are still used mostly in this way. There are also commercially available fibre reactive dyes for protein and polyamide fibres. In theory, fibre reactive dyes have been developed for other fibres, but these are not yet practical commercially. The dyes contain a reactive group that, when applied to a fibre in a weakly alkaline dyebath, form a chemical bond with the fibre. Reactive dyes can also be used to dye wool and nylon, in the latter case they are applied under weakly acidic conditions. <br> <br> The most important characteristic of reactive dyes is the formation of covalent bonds with the substrate to be coloured, i.e. the dye forms a chemical bond with cellulose, which is the main component of cotton fibers. <br> <br> Fiber reactive dyes are the most permanent of all dye types. Unlike other dyes, it actually forms a covalent bond with the cellulose or protein molecule. Once the bond is formed, what you have is one molecule, as the dye molecule has become an actual part of the cellulose fiber molecule. No wonder you can safely wash a garment that has been dyed in bright fiber reactive colours with white clothing, a hundred times, without endangering the whites in the least - even if it is all different bright colours, or even solid black! In contrast to all other dyes the reactive dyes bind chemically to the textile fibres, significantly improving the product's colour stability and washability. Thus reactive dying of cotton is currently the most widespread textile dying process in the world.",
+                    "table" : "Products/reactive-dyes/json/reactive-cold-dyes.json"
+                }
+            ]
+        }
+    ]
+}

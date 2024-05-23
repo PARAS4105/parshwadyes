@@ -1,53 +1,84 @@
-<div class="header-wrapper" ng-class="{'black-header' : blackHeader}">
+<div class="header-wrapper" ng-class="{'active': mobileMenuActive }" ng-class="{'black-header' : blackHeader}" id="header">
     <div class="header-container main-container">
         <div class="header-flex">
             <div class="header-logo">
                 <a href="{{base_url}}">
+                    <img src="assets/images/logo/white-logo.png" class="white-logo" alt="">
                     <img src="assets/images/logo/logo.png" class="black-logo" alt="">
-                    <img src="assets/images/logo/logo.png" class="white-logo" alt="">
                 </a>
             </div>
             <div class="header-navigation-links link-fonts hidden-xs hidden-sm">
                 <ul class="inner-flex">
                     <li>
-                        <a href="" class="uppercase white-color" ng-class="{'active'  : activePath = '/' }">
+                        <a href="{{base_url}}" class="uppercase white-color" ng-class="{'active'  :  activePath == '/' }">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="" class="uppercase white-color" ng-class="{'active'  : activePath = '/about' }">
+                        <a href="about" class="uppercase white-color" ng-class="{'active'  : activePath == '/about' }">
                             About us
                         </a>
                     </li>
                     <li>
-                        <a href="" class="uppercase white-color" ng-class="{'active'  : activePath = '/quality' }">
+                        <a href="quality" class="uppercase white-color" ng-class="{'active'  : activePath == '/quality' }">
                             Quality
                         </a>
                     </li>
                     <li>
-                        <a href="" class="uppercase white-color" ng-class="{'active'  : activePath = '/agent' }">
+                        <a href="agent" class="uppercase white-color" ng-class="{'active'  : activePath == '/agent' }">
                             Agent Or Seller
                         </a>
                     </li>
                     <li>
-                        <a href="" class="uppercase white-color" ng-class="{'active'  : activePath = '/contact' }">
+                        <a href="contact" class="uppercase white-color" ng-class="{'active'  : activePath == '/contact' }">
                             contact
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="header-btn hidden-xs hidden-sm">
+            <a href="dyes" class="header-btn hidden-xs hidden-sm">
                 <button class="gradient-btn uppercase">
                     Products <span class="secondary-color"> / </span> 10
                 </button>
-            </div>
+            </a>
             <div class="header-btn visible-xs visible-sm">
-                <div class="menu ">
+                <div class="menu " ng-class="{'active':  mobileMenuActive }" ng-click="mobileMenuClick()">
                     <div class="bar top"></div>
                     <div class="bar middle"></div>
                     <div class="bar bottom"></div>
                 </div>
+               
             </div>
+        </div>
+
+        <div class="manu_Navigation section-padding" ng-class="{'active':  mobileMenuActive}">
+            <ul class="inner-flex">
+                <li ng-click="mobileMenuClickClose()">
+                    <a href="{{base_url}}" class="uppercase white-color"  ng-class="{'active'  : activePath == '/' }">
+                        Home
+                    </a>
+                </li>
+                <li ng-click="mobileMenuClickClose()">
+                    <a href="about" class="uppercase white-color" ng-class="{'active'  : activePath == '/about' }">
+                        About us
+                    </a>
+                </li>
+                <li ng-click="mobileMenuClickClose()">
+                    <a href="quality" class="uppercase white-color" ng-class="{'active'  : activePath == '/quality' }">
+                        Quality
+                    </a>
+                </li>
+                <li ng-click="mobileMenuClickClose()">
+                    <a href="agent" class="uppercase white-color" ng-class="{'active'  : activePath == '/agent' }">
+                        Agent Or Seller
+                    </a>
+                </li>
+                <li ng-click="mobileMenuClickClose()">
+                    <a href="contact" class="uppercase white-color" ng-class="{'active'  : activePath == '/contact' }">
+                        contact
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

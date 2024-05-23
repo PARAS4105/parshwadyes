@@ -519,6 +519,7 @@ button {
     border: none;
     outline: none;
     font-size: var(--link-font-size);
+    font-family: var(--regular-font-family);
     color: var(--white-color);
     border-radius: 10rem;
     height: 40px;
@@ -609,7 +610,7 @@ button.common-link-btn {
 }
 
 .header-btn button {
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
 }
 
 .header-navigation-links ul li {
@@ -621,7 +622,7 @@ button.common-link-btn {
     bottom: 25%;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 95%;
     z-index: 9;
 }
 
@@ -721,7 +722,7 @@ button.common-link-btn {
 }
 
 .parshwadyes-home-section-four {
-    background-image: url('https://dummyimage.com/1920x700/c1c1c1/c1c1c1');
+    background-image: url('../images/homepage/HOMEPAGE-R&D.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -847,6 +848,7 @@ button.common-link-btn {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    z-index: 9;
 }
 
 .menu .bar {
@@ -857,11 +859,11 @@ button.common-link-btn {
 }
 
 .menu.active .bar.top {
-    transform: translateY(8px) rotate(-60deg);
+    transform: translateY(8px) rotate(-45deg);
 }
 
 .menu.active .bar.bottom {
-    transform: translateY(-8px) rotate(60deg);
+    transform: translateY(-8px) rotate(45deg);
 }
 
 .menu.active .bar.middle {
@@ -893,10 +895,47 @@ button.common-link-btn {
     background-color: var(--primary-color) !important;
 }
 
-.whatsapp-btn{
+
+
+
+.whatsapp-btn {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
     width: 2rem;
     z-index: 999;
+}
+
+/* jay */
+
+.about-img {
+    width: 60%;
+}
+
+.detaildiscription .section-content p,
+.detaildiscription .section-content span {
+    color: var(--gray-color);
+}
+
+.manu_Navigation {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    padding: 8rem 2rem;
+    transition: var(--common-transition);
+    z-index: -1;
+}
+
+.manu_Navigation.active {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0%;
+    background-color:  var(--primary-color);
+
+}
+.manu_Navigation a {
+    font-size: var(--subtitle-font-size);
 }

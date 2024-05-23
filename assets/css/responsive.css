@@ -91,6 +91,16 @@
         flex-direction: row;
 
     }
+    .textimg {
+        padding-right: 1rem;
+    }
+    .about_sec4_text {
+        justify-content: end;
+        padding: 3rem 0;
+    }
+    .header-wrapper {
+        padding: 1.5rem 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -146,9 +156,11 @@
         margin: 1rem auto;
     }
 
-    .header-wrapper {
-        padding: 1.5rem 0;
+ 
+    .about_sec4_text {
+        padding: 1rem 0;
     }
+
 
 }
 

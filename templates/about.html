@@ -1,0 +1,242 @@
+<div class="parshwadyes-main-wrapper">
+    <div class="parshwadyes-about-wrapper inner-flex sect-gap" id="parshwadyes-about-wrapper">
+        <section class="parshwadyes-home-section-one relative" id="parshwadyes-home-section-one">
+
+            <div class="banner-img h100">
+                <img src="assets/images/about/about_banner.png" class="h100" alt="">
+            </div>
+            <div class="banner-pagination-container inner-flex alc">
+                <div class="home-banner-pagination ">
+                    <div class="down-arrow">
+                        <img src="assets/images/icons/down-arrow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-text inner-flex small-gap alc text-center">
+                <div class="banner-title ">
+                    <h1 class="white-color">Since 1998</h1>
+                </div>
+                <div class="section-subtitle">
+                    <h3 class="white-color">A Motion of colour & <br>
+                        crafters of the white pigment</h3>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="parshwadyes-home-section-two  relative" id="parshwadyes-home-section-two">
+            <div class="main-container">
+                <div class="home-common-grid inner-flex medium-mob-gap">
+                    <div class="inner-flex  w50">
+                        <div class="home-title section-smalltitle  flex-row alc">
+                            <span class="dot"></span>
+                            <h4 class="gray-color">About</h4>
+                        </div>
+
+                        <div class="section-title">
+                            <h2>The company with a
+                                good attitude</h2>
+                        </div>
+
+                        <div class="section-subtitle">
+                            <h3 class="">Today, Parshwanath Group Has emerged as a
+                                Leading Business Conglomerate in <br class="hidden-xs">
+                                Dyestuff Industry.</h3>
+                        </div>
+                    </div>
+                    <div class="inner-flex big-gap mlauto w50">
+
+                        <div class="flex-row medium-gap j-c-sb">
+                            <div class="inner-flex alc " ng-class="{'text-center' : isMobileScreen}">
+                                <div class="about-img">
+                                    <img src="assets/images/homepage/HOMEPAGE-ABOUT-01.svg" alt="">
+                                </div>
+                                <div class="about-text section-content">
+                                    <p class="secondary-color uppercase"> QUALITY PRODUCTS </p>
+                                </div>
+                            </div>
+                            <div class="inner-flex alc" ng-class="{'text-center' : isMobileScreen}">
+                                <div class="about-img">
+                                    <img src="assets/images/homepage/HOMEPAGE-ABOUT-02.svg" alt="">
+                                </div>
+                                <div class="about-text section-content">
+                                    <p class="secondary-color uppercase"> YEARS EXPERIENCE </p>
+                                </div>
+                            </div>
+                            <div class="inner-flex alc" ng-class="{'text-center' : isMobileScreen}">
+                                <div class="about-img">
+                                    <img src="assets/images/homepage/HOMEPAGE-ABOUT-03.svg" alt="">
+                                </div>
+                                <div class="about-text section-content">
+                                    <p class="secondary-color uppercase"> 05 PRODUCTION UNITS </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <p class="gray-color">
+                                PARSHWANATH GROUP OF INDUSTRIES was incorporated in 1998 as a <br class="hidden-xs">
+                                small-scale dyestuff manufacturing unit Today, Parshwanath group has emerged
+                                as a leading business conglomerate in dyestuff industry, It's our experience that
+                                has enabled up to develop and maintain "State of Art" Infrastructure.
+                            </p>
+                        </div>
+                        <div class="about-btn wfc">
+                            <a href="about">
+                                <button class="gradient-btn  common-link-btn">
+                                    About us
+                                    <img src="assets/images/icons/rounded-diagonal-arrow.svg" class="btn-icon" alt="">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="parshwadyes-contact-section-three relative" id="parshwadyes-contact-section-three">
+            <div class="main-container">
+                <div class="visible-sm visible-xs">
+
+                    <div class=" about_sect3 section-padding relative">
+                        <div class="relative">
+                            <ks-swiper-container override-parameters="aboutSwiper">
+                                <ks-swiper-slide ng-repeat="data in locationData">
+                                    <a href="">
+                                        <div class="inner-flex medium-gap about_sec3_box ">
+                                            <div class="section-content inner-flex box_content">
+                                                <p class="medium-fonts text-left">{{data.name}}</p>
+                                                <p class="text-left">{{data.unitData}}</p>
+                                            </div>
+                                            <div class="inner-flex box_address">
+                                                <p ng-bind-html="data.addressData" class="text-left"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </ks-swiper-slide>
+
+                            </ks-swiper-container>
+                        </div>
+                        <div class="swiper-pagination tagline_swiper-pagination"></div>
+
+                    </div>
+                </div>
+
+
+                <div class="hidden-sm hidden-xs">
+                    <div class="about_sect3_grid section-padding">
+                        <a href="" ng-repeat="data in locationData">
+                            <div class="inner-flex medium-gap about_sec3_box">
+                                <div class="section-content inner-flex box_content">
+                                    <p class="medium-fonts">{{data.name}}</p>
+                                    <p>{{data.unitData}}</p>
+
+
+
+                                </div>
+                                <div class="inner-flex box_address">
+                                    <p ng-bind-html="data.addressData"></p>
+
+                                </div>
+
+
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="parshwadyes-home-section-four about-sect4-bg relative" id="parshwadyes-home-section-four">
+            <div class="main-container home-sect4-text">
+                <div class=" inner-flex big-gap alc text-center">
+                    <div class="inner-flex medium-gap">
+
+                        <div class="section-title ">
+                            <h1 class="white-color">Parshwanath group of industries</h1>
+                        </div>
+                        <div class="section-subtitle">
+                            <h3 class="white-color">
+                                We are offering our services to enabled our<br class="hidden-xs"> principle to reach the
+                                destination</h3>
+                        </div>
+                    </div>
+                    <div class="about-sect4-content section-content w50 m0auto">
+                        <p class="white-color " read-more dd-text-collapse-max-length="650"
+                            dd-text-collapse-text=" We are offering our services to enabled our principle to reach the destination where they can perform effectively and face any type of competitive business market to attain their targets. With a strong vision of corporate
+                        governance, business ethics and customer satisfaction, we are growing from strength to strength, Parshwanath Group of Industries is structured around class ic organization department such as sales operations, marketing finance, etc. with a strong belief in fundamental proven business practices. At the same time, our group has implemented unique and progressive conduct environment of management control system. The most important characteristic of reactive is the formation of covalent bonds with the substrate to be coloured, i.e. the dye forms a chemical bond with cellulose, which is the main component of cotton fibers.">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="parshwadyes-contact-section-three relative" id="parshwadyes-contact-section-three">
+            <div class="main-container">
+                <div class="inner-flex big-gap  ">
+                    <div class="two-col-grid about_sec4_main medium-mob-gap ">
+                        <div class="inner-flex about_sec4_text ">
+                            <div class="flex-row section-content ">
+                                <div>
+                                    <p class="medium-fonts gray-color"><span class="textimg"><img class="iconw"
+                                                src="assets/images/about/''text.svg" alt=""></span> The company has
+                                        emerged with its dedication & commitment
+                                        to provide quality products & services to its client & become one of
+                                        the significant players in its area of operation.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="w60 mlauto">
+                            <img src="assets/images/about/about_sec4.png" alt="">
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+        <section class="parshwadyes-home-section-two  relative" id="parshwadyes-home-section-two">
+            <div class="main-container">
+                <div class="two-col-grid  medium-mob-gap     about-sect5 alend">
+                    <div class="inner-flex  ">
+                        <div class="section-title inner-flex small-gap section-subtitle">
+                            <h2>Infrastructure</h2>
+                            <h3>We have four separate production <br class="hidden-xs">
+                                units and each unit is headed by <br class="hidden-xs">
+                                qualified and experienced professionals.</h3>
+                        </div>
+                    </div>
+                    <div class="section-content about_sec5_readmore hidden-xs hidden-sm">
+                        <p class="gray-color " read-more dd-text-collapse-max-length="160"
+                            dd-text-collapse-text=" PARSHWANATH GROUP OF INDUSTRIES is located in the industrial city of Ahmedabad, Gujarat, in the western part of India, which is known as the chemical hub of India. <br> We have four (5) separate production units and each unit is headed by qualified and experienced professionals. Some of the equipments in our paint are spray dries, which ensures free flow of dyes, Reverse osmosis system which ensure high concentration salt free Dyes.">
+                        </p>
+                    </div>
+                    <div class="section-content about_sec5_readmore visible-xs visible-sm">
+                        <p class="gray-color " read-more dd-text-collapse-max-length="160"
+                            dd-text-collapse-text=" PARSHWANATH GROUP OF INDUSTRIES is located in the industrial city of Ahmedabad, Gujarat, in the western part of India, which is known as the chemical hub of India. <br><br> We have four (5) separate production units and each unit is headed by qualified and experienced professionals. Some of the equipments in our paint are spray dries, which ensures free flow of dyes, Reverse osmosis system which ensure high concentration salt free Dyes. <br><br> Our infrastructure comprises of the entire range of necessary instruments to pay attention to every section of our business & quality requirement. We have a huge array of skilled labours working with the help of the best & latest machinery available in market. <br><br> The machines are kept under the aegis of technical experts whose responsibility ranges from rectifying minor snags to notifying the authority concerned when a gadget requires to be replaced.">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="parshwadyes-about-section-seven  relative" id="parshwadyes-about-section-seven">
+            <div class="main-container">
+                <div class="sec7_grid alc big-gap">
+                    <div class=""></div>
+                    <div class="inner-flex small-gap section-content hidden-sm hidden-xs">
+                        <p class="white-color">Our infrastructure comprises of the entire range of necessary instruments
+                            to pay attention to every section of our business & quality requirement. We
+                            have a huge array of skilled labours working with the help of the best &
+                            latest machinery available in market.</p>
+                        <p class="white-color">The machines are kept under the aegis of technical experts whose
+                            responsibility ranges from rectifying minor snags to notifying the authority
+                            concerned when a gadget requires to be replaced.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

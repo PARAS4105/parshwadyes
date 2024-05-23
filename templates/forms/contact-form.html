@@ -1,52 +1,51 @@
 <div class="contact-wrapper">
-    <form class="contactForm" name="contactForm" id="contactForm">
+    <form class="contactForm" name="contactForm" id="contactForm" ng-validate="contact_validate" ng-submit="submitinquiry(contactForm)">
         <div class="contact-label">
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" id="name" ng-model="contactObj.name" letters-only required >
             <label for="name" class="md-label">Name</label>
         </div>
         <div class="contact-label">
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" ng-model="contactObj.email" required >
             <label for="email" class="md-label">Email Address</label>
         </div>
         <div class="contact-label">
-            <input type="text" name="contact" id="contact" required>
-            <label for="contact" class="md-label">Contact</label>
+            <input type="text" name="contact_no" id="contact_no" numbers-only ng-model="contactObj.contact_no" required minlength="10" maxlength="10">
+        <label class="md-label" for="contact_no">Contact</label>
         </div>
         <div class="contact-label">
-            <input type="text" name="inquiry" id="inquiry" required>
+            <input type="text" name="inquiry" id="inquiry" ng-model="contactObj.inquiry" required>
             <label for="inquiry" class="md-label">Inquiry for</label>
         </div>
         <div class="contact-label">
-            <input type="text" name="country" id="country" required>
+            <input type="text" name="country" id="country" ng-model="contactObj.country" required>
             <label for="country" class="md-label">Country</label>
         </div>
         <div class="contact-label">
-            <input type="text" name="city" id="city" required>
+            <input type="text" name="city" id="city" ng-model="contactObj.city" required>
             <label for="city" class="md-label">City</label>
         </div>
         <div class="contact-label">
-            <input type="text" name="companyname" id="companyname" required>
+            <input type="text" name="companyname" id="companyname" ng-model="contactObj.companyname" required>
             <label for="companyname" class="md-label">Company Name</label>
         </div>
         <div class="contact-label">
-            <input type="text" name="name" id="name" required>
-            <label for="name" class="md-label">Website</label>
+            <input type="text" name="webname" id="webname" ng-model="contactObj.webname" required>
+            <label for="webname" class="md-label">Website</label>
         </div>
-        <div class="contact-label">
-            <textarea type="text" name="message" id="message" rows="3" required>
-            </textarea>
-            <label for="message" class="md-label">Message</label>
+        <div class="contact-label textarea_label">
+            <textarea name="message" id="message" rows="4" ng-model="contactObj.message"></textarea>
+            <label class="md-label" for="message">Message</label>
 
         </div>
-        <div class="contact-label checkbok-label">
-            <input type="checkbox" name="tnc" id="tnc" required>
+        <div class="contact-label checkbox-label">
+            <input type="checkbox" name="tnc" id="tnc" ng-model="contactObj.tnc" required>
             <label for="tnc" class="md-label">I'm not a robot <br>
                 By submitting this form I accept the Privacy Policy of this site.</label>
 
         </div>
 
         <div class="about-btn wfc">
-            <button class="gradient-btn  common-link-btn" type="submit">
+            <button class="gradient-btn  common-link-btn" type="submit"  ng-disabled="isInquiry">
                 Send Now
                 <img src="assets/images/icons/rounded-diagonal-arrow.svg" class="btn-icon" alt="">
             </button>

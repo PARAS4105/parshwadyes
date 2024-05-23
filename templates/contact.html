@@ -26,11 +26,11 @@
         </section>
         <section class="parshwadyes-contact-section-two relative" id="parshwadyes-contact-section-two">
             <div class="main-container">
-                <div class="sec2flex">
+                <div class="contact_sec2flex">
                     <div class="section-content flex-row sect2flex_catagory sec2_head">
                         <div class="sec2heading" ng-repeat="data in TabPanalData " ng-click="contactClick(data) "
                             ng-class="{active : tabObj.catagory == data.catagory }">
-                            <p class="gray-color"> {{ data.catagory}}&nbsp;<span class="secondary-color">/</span>&nbsp;
+                            <p class="gray-color"> {{ data.catagory}}&nbsp;<span ng-if="$index < TabPanalData.length - 1 " class="secondary-color">/</span>&nbsp;
                             </p>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                         <div class="sec2_adrs inner-flex big-gap">
                             <div class="section-content inner-flex locationflex">
                                 <div class="loction_icon">
-                                    <img src="https://www.dummyimage.com/40x40/c1c1c1/c1c1c1" alt="">
+                                    <img src="assets/images/contact/location-icon.svg" alt="">
                                 </div>
                                 <div class="inner-flex" ng-bind-html="tabObj.contentData"></div>
 
@@ -64,7 +64,7 @@
                         </div>
                         <div class="sec2imgflex">
                             <div class="sec2img relative">
-                                <img src="assets/images/contact/contact-product-1.jpg" alt="">
+                                <img src="{{tabObj.imgs}}" alt="">
                                 <span class="img_text bold-fonts">
                                     {{tabObj.catagory}}
                                 </span>
@@ -74,7 +74,7 @@
                 </div>
             </div>
         </section>
-        <section class="parshwadyes-contact-section-two relative" id="parshwadyes-contact-section-two">
+        <section class="parshwadyes-contact-section-three  relative" id="parshwadyes-contact-section-three">
             <div class="main-container">
                 <div class="inner-flex big-gap ">
                     <div class="two-col-grid  medium-mob-gap ">
