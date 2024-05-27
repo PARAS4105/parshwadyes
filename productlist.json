@@ -3,39 +3,484 @@
         {
             "slug": "reactive-dyes",
             "name": "Reactive Dyes",
+            "img": "assets/images/homepage/homepage-banner.jpg",
             "title": "Reactive Dyes Manufracturer",
-            "shortDiscription" : "Our high quality reactive dyes are manufactured  <br> & designed to permanently dye.",
+            "shortDiscription": "Our high quality reactive dyes are manufactured  <br> & designed to permanently dye.",
             "discription": "Parshwanath Group of Industries is a Leading Reactive Dyes Manufacturer, Supplier & Exporters in Brazil, Vietnam, Indonesia. Reactive dyes are a class of highly coloured organic substances, primarily used for tinting textiles, that attach themselves to their substrates by a chemical reaction that forms a covalent bond between the molecule of dye and that of the fibre. The dyestuff thus becomes a part of the fibre and is much less likely to be removed by washing than are dyestuffs that adhere by adsorption. <br> <br> The first fibre reactive dyes were designed for cellulose fibres, and they are still used mostly in this way. There are also commercially available fibre reactive dyes for protein and polyamide fibres. In theory, fibre reactive dyes have been developed for other fibres, but these are not yet practical commercially. The dyes contain a reactive group that, when applied to a fibre in a weakly alkaline dyebath, form a chemical bond with the fibre. Reactive dyes can also be used to dye wool and nylon, in the latter case they are applied under weakly acidic conditions. <br> <br> The most important characteristic of reactive dyes is the formation of covalent bonds with the substrate to be coloured, i.e. the dye forms a chemical bond with cellulose, which is the main component of cotton fibers. <br> <br> Fiber reactive dyes are the most permanent of all dye types. Unlike other dyes, it actually forms a covalent bond with the cellulose or protein molecule. Once the bond is formed, what you have is one molecule, as the dye molecule has become an actual part of the cellulose fiber molecule. No wonder you can safely wash a garment that has been dyed in bright fiber reactive colours with white clothing, a hundred times, without endangering the whites in the least - even if it is all different bright colours, or even solid black! In contrast to all other dyes the reactive dyes bind chemically to the textile fibres, significantly improving the product's colour stability and washability. Thus reactive dying of cotton is currently the most widespread textile dying process in the world.",
             "categoryArray": [
                 {
-                    "category": "REACTIVE COLD DYES"
+                    "category": "Reactive Cold Dyes",
+                    "category_id": "reactive-cold-dyes"
                 },
                 {
-                    "category": "REACTIVE HE DYES"
+                    "category": "Reactive HE Dyes",
+                    "category_id": "reactive-he-dyes"
                 },
                 {
-                    "category": "REACTIVE HOT DYES"
+                    "category": "Reactive Hot Dyes",
+                    "category_id": "reactive-hot-dyes"
                 },
                 {
-                    "category": "REACTIVE ME DYES"
+                    "category": "Reactive ME Dyes",
+                    "category_id": "reactive-me-dyes"
                 },
                 {
-                    "category": "REACTIVE VINYL SULPHONE BASE DYE"
+                    "category": "Reactive Vinyl Sulphone Base Dyes",
+                    "category_id": "reactive-Vinyl-Sulphone-Base-dyes"
                 },
                 {
-                    "category": "REACTIVE PRINTING DYES"
+                    "category": "Reactive Printing Dyes",
+                    "category_id": "reactive-Printing-dyes"
                 }
             ],
-            "tableData" : [
+            "tableData": [
                 {
-                    "category": "REACTIVE COLD DYES",
-                    "discription" : "Reactive dyes are a class of highly coloured organic substances, primarily used for tinting textiles, that attach themselves to their substrates by a chemical reaction that forms a covalent bond between the molecule of dye and that of the fibre. The dyestuff thus becomes a part of the fibre and is much less likely to be removed by washing than are dyestuffs that adhere by adsorption. <br> <br> The first fibre reactive dyes were designed for cellulose fibres, and they are still used mostly in this way. There are also commercially available fibre reactive dyes for protein and polyamide fibres. In theory, fibre reactive dyes have been developed for other fibres, but these are not yet practical commercially. The dyes contain a reactive group that, when applied to a fibre in a weakly alkaline dyebath, form a chemical bond with the fibre. Reactive dyes can also be used to dye wool and nylon, in the latter case they are applied under weakly acidic conditions. <br> <br> The most important characteristic of reactive dyes is the formation of covalent bonds with the substrate to be coloured, i.e. the dye forms a chemical bond with cellulose, which is the main component of cotton fibers. <br> <br> Fiber reactive dyes are the most permanent of all dye types. Unlike other dyes, it actually forms a covalent bond with the cellulose or protein molecule. Once the bond is formed, what you have is one molecule, as the dye molecule has become an actual part of the cellulose fiber molecule. No wonder you can safely wash a garment that has been dyed in bright fiber reactive colours with white clothing, a hundred times, without endangering the whites in the least - even if it is all different bright colours, or even solid black! In contrast to all other dyes the reactive dyes bind chemically to the textile fibres, significantly improving the product's colour stability and washability. Thus reactive dying of cotton is currently the most widespread textile dying process in the world.",
-                    "table" : "Products/reactive-dyes/json/reactive-cold-dyes.json"
+                    "category": "Reactive Cold Dyes",
+                    "category_id": "reactive-cold-dyes",
+                    "discription": "Reactive dyes are a class of highly coloured organic substances, primarily used for tinting textiles, that attach themselves to their substrates by a chemical reaction that forms a covalent bond between the molecule of dye and that of the fibre. The dyestuff thus becomes a part of the fibre and is much less likely to be removed by washing than are dyestuffs that adhere by adsorption. <br> <br> The first fibre reactive dyes were designed for cellulose fibres, and they are still used mostly in this way. There are also commercially available fibre reactive dyes for protein and polyamide fibres. In theory, fibre reactive dyes have been developed for other fibres, but these are not yet practical commercially. The dyes contain a reactive group that, when applied to a fibre in a weakly alkaline dyebath, form a chemical bond with the fibre. Reactive dyes can also be used to dye wool and nylon, in the latter case they are applied under weakly acidic conditions.<br> <br> The most important characteristic of reactive dyes is the formation of covalent bonds with the substrate to be coloured, i.e. the dye forms a chemical bond with cellulose, which is the main component of cotton fibers.<br> <br> Fiber reactive dyes are the most permanent of all dye types. Unlike other dyes, it actually forms a covalent bond with the cellulose or protein molecule. Once the bond is formed, what you have is one molecule, as the dye molecule has become an actual part of the cellulose fiber molecule. No wonder you can safely wash a garment that has been dyed in bright fiber reactive colours with white clothing, a hundred times, without endangering the whites in the least - even if it is all different bright colours, or even solid black! In contrast to all other dyes the reactive dyes bind chemically to the textile fibres, significantly improving the product's colour stability and washability. Thus reactive dying of cotton is currently the most widespread textile dying process in the world."
                 },
                 {
-                    "category": "REACTIVE HE DYES",
-                    "discription" : "Reactive dyes are a class of highly coloured organic substances, primarily used for tinting textiles, that attach themselves to their substrates by a chemical reaction that forms a covalent bond between the molecule of dye and that of the fibre. The dyestuff thus becomes a part of the fibre and is much less likely to be removed by washing than are dyestuffs that adhere by adsorption. <br> <br> The first fibre reactive dyes were designed for cellulose fibres, and they are still used mostly in this way. There are also commercially available fibre reactive dyes for protein and polyamide fibres. In theory, fibre reactive dyes have been developed for other fibres, but these are not yet practical commercially. The dyes contain a reactive group that, when applied to a fibre in a weakly alkaline dyebath, form a chemical bond with the fibre. Reactive dyes can also be used to dye wool and nylon, in the latter case they are applied under weakly acidic conditions. <br> <br> The most important characteristic of reactive dyes is the formation of covalent bonds with the substrate to be coloured, i.e. the dye forms a chemical bond with cellulose, which is the main component of cotton fibers. <br> <br> Fiber reactive dyes are the most permanent of all dye types. Unlike other dyes, it actually forms a covalent bond with the cellulose or protein molecule. Once the bond is formed, what you have is one molecule, as the dye molecule has become an actual part of the cellulose fiber molecule. No wonder you can safely wash a garment that has been dyed in bright fiber reactive colours with white clothing, a hundred times, without endangering the whites in the least - even if it is all different bright colours, or even solid black! In contrast to all other dyes the reactive dyes bind chemically to the textile fibres, significantly improving the product's colour stability and washability. Thus reactive dying of cotton is currently the most widespread textile dying process in the world.",
-                    "table" : "Products/reactive-dyes/json/reactive-cold-dyes.json"
+                    "category": "Reactive HE Dyes",
+                    "category_id": "reactive-he-dyes",
+                    "discription": "The reactive dyes provided by us impart excellent chemical properties and are manufactured by incorporating many technologies. These are available in undermentioned shades, chemical compositions and specifications."
+                },
+                {
+                    "category": "Reactive Hot Dyes",
+                    "category_id": "reactive-hot-dyes",
+                    "discription": "The reactive dyes provided by us impart excellent chemical properties and are manufactured by incorporating many technologies. These are available in undermentioned shades, chemical compositions and specifications."
+                },
+                {
+                    "category": "Reactive ME Dyes",
+                    "category_id": "reactive-me-dyes",
+                    "discription": ""
+                },
+                {
+                    "category": "Reactive Vinyl Sulphone Base Dyes",
+                    "category_id": "reactive-Vinyl-Sulphone-Base-dyes",
+                    "discription": ""
+                },
+                {
+                    "category": "Reactive Printing Dyes",
+                    "category_id": "reactive-Printing-dyes",
+                    "discription": ""
+                }
+            ]
+        },
+        {
+            "slug": "food-colors",
+            "name": "Food Color",
+            "img": "assets/images/homepage/2-Food-Colour-banner.jpg",
+            "title": "Food Color",
+            "shortDiscription": "Our high quality reactive dyes are manufactured  <br> & designed to permanently dye.",
+            "discription": "Parshwanath Group of Industries is a Leading Reactive Dyes Manufacturer, Supplier & Exporters in Brazil, Vietnam, Indonesia. Reactive dyes are a class of highly coloured organic substances, primarily used for tinting textiles, that attach themselves to their substrates by a chemical reaction that forms a covalent bond between the molecule of dye and that of the fibre. The dyestuff thus becomes a part of the fibre and is much less likely to be removed by washing than are dyestuffs that adhere by adsorption. <br> <br> The first fibre reactive dyes were designed for cellulose fibres, and they are still used mostly in this way. There are also commercially available fibre reactive dyes for protein and polyamide fibres. In theory, fibre reactive dyes have been developed for other fibres, but these are not yet practical commercially. The dyes contain a reactive group that, when applied to a fibre in a weakly alkaline dyebath, form a chemical bond with the fibre. Reactive dyes can also be used to dye wool and nylon, in the latter case they are applied under weakly acidic conditions. <br> <br> The most important characteristic of reactive dyes is the formation of covalent bonds with the substrate to be coloured, i.e. the dye forms a chemical bond with cellulose, which is the main component of cotton fibers. <br> <br> Fiber reactive dyes are the most permanent of all dye types. Unlike other dyes, it actually forms a covalent bond with the cellulose or protein molecule. Once the bond is formed, what you have is one molecule, as the dye molecule has become an actual part of the cellulose fiber molecule. No wonder you can safely wash a garment that has been dyed in bright fiber reactive colours with white clothing, a hundred times, without endangering the whites in the least - even if it is all different bright colours, or even solid black! In contrast to all other dyes the reactive dyes bind chemically to the textile fibres, significantly improving the product's colour stability and washability. Thus reactive dying of cotton is currently the most widespread textile dying process in the world.",
+            "categoryArray": [
+                {
+                    "category": "Food Colours",
+                    "category_id": "food-colours"
+                },
+                {
+                    "category": "Lake Colours",
+                    "category_id": "lake-colours"
+                },
+                {
+                    "category": "Blended Colours",
+                    "category_id": "blended-colours"
+                },
+                {
+                    "category": "D & C Colours",
+                    "category_id": "d-and-c-colours"
+                }
+            ],
+            "tableData": [
+                {
+                    "category": "Food Colours",
+                    "category_id": "food-colours",
+                    "title2": "Why Are Colour Additives Used In Foods?",
+                    "discription2": "Colour is an important property of foods that adds to our enjoyment of eating. Nature teaches is early to expect certain colours in certain foods, and our future acceptance of foods is highly dependent on meeting these expectations. <br> <br> Colour variation in foods throughout the seasons and the effects of food processing and storage often require that manufacturers add colour to certain foods to meet consumer expectations. The primary reasons of adding colours to foods include:<br> <br> » To offset colour loss due to exposure to light, air, extremes of temperature, moisture and storage conditions.<br> » To correct natural variations in colour. Off-coloured foods are often incorrectly associated with inferior quality. For example, some tree-ripened oranges are often sprayed with Citrus Red No.2 to correct the natural orangy-brown or mottled green colour of their peels (Masking inferior quality, however, is an unacceptable use of colours.)<br> <br> » To enhance colours that occur naturally but at levels weaker than those usually associated with a given food.<br> » To provide a colourful identity to foods that would otherwise be virtually colourless. Red colours provide a pleasant identity to strawberry ice while lime sherbet is known by its bright green colour.<br> <br>» To provide a colourful appearance to certain \"fun foods.\" Many candies and holiday treats are coloured to create a festive appearance.<br> » To protect flavours and vitamins that may be affected by sunlight during storage.<br> <br>» To provide an appealing variety of wholesome and nutritious foods that meet consumers' demands.<br> <br>"
+                },
+                {
+                    "category": "Lake Colours",
+                    "category_id": "lake-colours",
+                    "discription": ""
+                },
+                {
+                    "category": "Blended Colours",
+                    "category_id": "blended-colours",
+                    "discription": ""
+                },
+                {
+                    "category": "D & C Colours",
+                    "category_id": "d-and-c-colours",
+                    "discription": "Known as drug & cosmetic colours suitable for tablet coatings, compressed tablets, syrups, hard & soft gelatin capsules, toiletries, skin-care products, water-based make-up, toothpaste, lipstick, nail polish, pencil, foundation and lip gloss.",
+                    "title2": "Uses",
+                    "discription2": "<div class=\"usesGrid \"><ul class=\"two-col-grid small-gap\"><li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Use in Toothpaste</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Liquid Soap</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Bath Soap</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>After Shave</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Toilet Cleaner</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Liquid Dish Washer</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Capsules</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Syrups</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Deodorants</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Shampoos</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Hair Oil</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Skin Creams</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Glass Cleaner</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Detergents</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Tablet Coatings</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Other personal care and home care products</p></li> </ul></div>"
+                }
+            ]
+        },
+        {
+            "slug": "direct-dyes",
+            "name": "Direct Dyes",
+            "img": "assets/images/homepage/3-Direct-Dyes.jpg",
+            "title": "Direct Dyes",
+            "shortDiscription": "",
+            "discription": "Direct dyes are another class of dyes, one of the two types of dyes that are mixed in 'all purpose' dyes such as Rit. (The other type in the mixture is an acid dye, which will not stay in any cellulose fiber for long.) The colours of direct dyes are duller than those provided by fiber reactive dyes, and the washfastness is poor - expect anything dyed with them to 'bleed' forever. The one advantage is that direct dyes may be more lightfast, that is, resistant to fading in the light, than fiber reactive dyes. The \"direct dye\" classification in the Colour Index system refers to various planar, highly conjugated molecular structures that also contain one or more anionic sulfonate group. It is because of these sulfonate groups that the molecules are soluble in water. Though most direct dyes still can be obtained in powder form, it is increasingly popular to receive them as liquid concentrates. The advantage of concentrates is that they are easy to handle and meter. The disadvantage is that the surfactants and co-solvents needed to keep the dye concentrates stable may interfere with retention and sizing in the case of very deeply coloured grades. <br><br> Direct dyes are used on cellulose fibers such as cotton, rayon, and linen. They lack the permanence of the cold water fiber reactive dyes which most serious dyers prefer for use on cellulose fibers, but in some cases they have advantages that make their use worthwhile. For example, while many of the direct dyes are not very lightfast, there are some dyes in the class that may be more lightfast than similar shades of fiber reactive dyes. All direct dyes perform rather poorly with respect to washfastness. Without an appropriate after-treatment, direct dyes bleed a little with every washing, losing their brightness and endangering other clothes washed in the same load. However, there are special after-treatments which may be used to solve this problem. (Vinegar is not among them! In spite of claims you may see to the contrary, you cannot use vinegar to set any dye on cotton or other cellulose materials.) A product called Retayne, which is an ionic bulking agent which essentially \"glues\" the dye into the fiber, works very well to make fabric dyed with direct dyes washable without bleeding of the dye.<br><br> The name 'direct dye' alludes to the fact that these dyes do not require any form of 'fixing'. They are almost always azo dyes, with some similarities to acid dyes. They also have sulphonate functionality, but in this case, it is only to improve solubility, as the negative charges on dye and fibre will repel each other. Their flat shape and their length enable them to lie along-side cellulose fibres and maximize the Van-der-Waals, dipole and hydrogen bonds. Below is a diagram of a typical direct dye. Note that the sulphonate groups are spread evenly along the molecule on the opposite side to the hydrogen bonding -OH groups, to minimize any repulsive effects.<br><br> ",
+            "categoryArray": [
+                {
+                    "category": "Sunfast & Non Benzidine Direct Dyes",
+                    "category_id": "sunfast-&-non-benzidine-direct-dyes"
+                },
+                {
+                    "category": "Non Benzidine Direct",
+                    "category_id": "non-benzidine-direct"
+                }
+            ],
+            "tableData": [
+                {
+                    "category": "Sunfast & Non Benzidine Direct Dyes",
+                    "category_id": "sunfast-&-non-benzidine-direct-dyes",
+                    "discription": ""
+                },
+                {
+                    "category": "Non Benzidine Direct",
+                    "category_id": "non-benzidine-direct",
+                    "discription": ""
+                }
+            ]
+        },
+        {
+            "slug": "acid-dyes",
+            "name": "Acid Dyes",
+            "img": "assets/images/homepage/4-Acid-Dyes-banner_2.jpg",
+            "title": "Acid Dyes",
+            "shortDiscription": "",
+            "discription": "Parshwanath Group of Industries is a Leading Acid dyes Manufacturer, Supplier & Exporters in Brazil, Vietnam, Indonesia. Acid dyes are water soluble anionic dyes that are applied to fibres such as silk, wool, nylon and modified acrylic fibres from neutral to acid dye baths. Attachment to the fibre is attributed, at least partly, to salt formation between anionic groups in the dyes and cationic groups in the fibre. Water soluable Acid dyes are not substantive to cellulosic fibres. Acid dyes are used both commercially and by the studio dyer to dye protein/animal fibers such as wool, silk, mohair, angora, alpaca and some nylons and synthetics. Acid dyes require the use of an acid such as vinegar, acetic or sulphuric acid to set the colour.<br><br> Acid dyes sound scary to some novices, who imagine that the dyes themselves are caustic strong acids. In fact, the dyes are non-caustic, are in many cases non-toxic, and are named for the mild acid (such as vinegar) used in the dyeing process, and for the types of bonds they form to the fiber. Some of them are significantly more toxic than fiber reactive dyes, while others are even safe enough to eat, and are sold as food coloring.<br><br> ",
+            "categoryArray": [
+                {
+                    "category": "Acid Yellow Dyes",
+                    "category_id": "acid-yellow-dyes"
+                },
+                {
+                    "category": "Acid Orange Dyes",
+                    "category_id": "acid-orange-dyes"
+                },
+                {
+                    "category": "Acid Violet Dyes",
+                    "category_id": "acid-violet-dyes"
+                },
+                {
+                    "category": "Acid Red Dyes",
+                    "category_id": "acid-red-dyes"
+                },
+                {
+                    "category": "Acid Blue Dyes",
+                    "category_id": "acid-blue-dyes"
+                },
+                {
+                    "category": "Acid Green Dyes",
+                    "category_id": "acid-green-dyes"
+                },
+                {
+                    "category": "Acid Black Dyes",
+                    "category_id": "acid-black-dyes"
+                },
+                {
+                    "category": "Acid Brown Dyes",
+                    "category_id": "acid-brown-dyes"
+                }
+            ],
+            "tableData": [
+                {
+                    "category": "Acid Yellow Dyes",
+                    "category_id": "sunfast-&-non-benzidine-direct-dyes",
+                    "title2": "Acid dyes fall into several classes",
+                    "discription2": "1. Leveling acid or strong acid dye,<br> 2. Milling or weak acid dyes, and <br> 3. Super milling or fast acid or neutral acid dyes.<br><br> They are also the acid dye component of all-purpose or union dyes such as Rit and Tintex, says Knutson. It's difficult now to find out which specific acid dyes fall into which of these dye classes, however. At least part of the reason is that the information is not particularly useful to the dyer.<br><br> Most histologic dyes are classified either as acid or as basic dyes. An acid dye exists as an anion (negatively charged) in solution, while a basic dye exists as a cation (positive charge). For instance, in the hematoxylin-eosin stain (H&E), the hematoxylin-metal complex acts as a basic dye. The eosin acts as an acid dye. A very large class of dyes containing acidic groups, such as the sodium salts of sulfonic acids or phenolic groups. They are more soluble and have less tinctorial value than basic dyes but they also have greater light fastness. They do not form lakes with tannin. Acid dyes are used in dyeing leather, paper, etc., and their particular value lies in their ability to produce brighter, more uniform colours. They are normally applied from an acid dye liquor (acetic, formic, or sulphuric acid); however, unless applied from a neutral or only slightly acid dyebath, i.e., pH of 6.0 to 7.0, their use is likely to result in acid degradation of the material dyed.<br><br>"
+                },
+                {
+                    "category": "Acid Orange Dyes",
+                    "category_id": "acid-orange-dyes",
+                    "discription": ""
+                },
+                {
+                    "category": "Acid Violet Dyes",
+                    "category_id": "acid-violet-dyes",
+                    "discription": ""
+                },
+                {
+                    "category": "Acid Red Dyes",
+                    "category_id": "acid-red-dyes",
+                    "discription": ""
+                },
+                {
+                    "category": "Acid Blue Dyes",
+                    "category_id": "acid-blue-dyes",
+                    "discription": ""
+                },
+                {
+                    "category": "Acid Green Dyes",
+                    "category_id": "acid-green-dyes",
+                    "discription": ""
+                },
+                {
+                    "category": "Acid Black Dyes",
+                    "category_id": "acid-black-dyes",
+                    "discription": ""
+                },
+                {
+                    "category": "Acid Brown Dyes",
+                    "category_id": "acid-brown-dyes",
+                    "discription": ""
+                }
+            ]
+        },
+        {
+            "slug": "wood-stain-dyes",
+            "name": "Wood Stain Dyes",
+            "img": "assets/images/homepage/5-Wood-Stain-Dyes.jpg",
+            "title": "Wood Stain Dyes",
+            "shortDiscription": "",
+            "discription": "Wood stain dyes penetrates deep into the wood grain producing a long lasting and translucent stain. We have used a good oil base and anti- settling formula for a rich depth of color on the wood. With our palette of colors in wood stain dyes, one can give his home furniture, doors and windows a perfect color. These stain dyes are available in both power as well as liquid form. Mixed in solvents like alcohol, lacquer and oil, these dye stains give better clarity than pigment stains.",
+            "categoryArray": [
+                {
+                    "category": "Wood Stain Dyes",
+                    "category_id": "wood-stain-dyes"
+                }
+            ],
+            "tableData": [
+                {
+                    "category": "Wood Stain Dyes",
+                    "category_id": "wood-stain-dyes",
+                    "discription": "Wood stain dyes penetrates deep into the wood grain producing a long lasting and translucent stain. We have used a good oil base and anti- settling formula for a rich depth of color on the wood. With our palette of colors in wood stain dyes, one can give his home furniture, doors and windows a perfect color. These stain dyes are available in both power as well as liquid form. Mixed in solvents like alcohol, lacquer and oil, these dye stains give better clarity than pigment stains."
+                }
+            ]
+        },
+        {
+            "slug": "pigment-powder",
+            "name": "Pigment Powder",
+            "img": "assets/images/homepage/6-Pigment-Powder-Manufacturer.jpg",
+            "title": "Pigment Powder",
+            "shortDiscription": "",
+            "discription": "Parshwanath Group of Industries is a Leading Pigment Powder Manufacturer, Supplier & Exporters in Brazil, Vietnam, Indonesia. Pigment Powder is coloured powder that is used to produce a full range of colours. It is an inert colorant which has no binding power. These pigments are mainly composed of iron oxides and earth colors and contain binding agents.<br><br> Using this powder, we produce all types of paints and colouring material like enamels, acrylics, pastels, chalks, coloured pencils and oils. Further, these pigment powders can also be mixed with colour concrete, plaster, plastic resins, wood putties and epoxy and can also be used for applications such as tinting wood fillers, wood finishing, shading pore filler pastes, colored waxes or for touch-up on furniture.",
+            "categoryArray": [
+                {
+                    "category": "Pigment Powder",
+                    "category_id": "pigment-powder"
+                }
+            ],
+            "tableData": [
+                {
+                    "category": "Pigment Powder",
+                    "category_id": "pigment-powder",
+                    "discription": "Parshwanath Group of Industries is a Leading Pigment Powder Manufacturer, Supplier & Exporters in Brazil, Vietnam, Indonesia. Pigment Powder is coloured powder that is used to produce a full range of colours. It is an inert colorant which has no binding power. These pigments are mainly composed of iron oxides and earth colors and contain binding agents.<br><br> Using this powder, we produce all types of paints and colouring material like enamels, acrylics, pastels, chalks, coloured pencils and oils. Further, these pigment powders can also be mixed with colour concrete, plaster, plastic resins, wood putties and epoxy and can also be used for applications such as tinting wood fillers, wood finishing, shading pore filler pastes, colored waxes or for touch-up on furniture."
+                }
+            ]
+        },
+        {
+            "slug": "solvent-dyes",
+            "name": "Solvent Dyes",
+            "img": "assets/images/homepage/7-Solvent-Dyes.jpg",
+            "title": "Solvent Dyes",
+            "shortDiscription": "",
+            "discription": "Our dyes are solvent soluble dyes of high quality for wide use in inks and coating industries. Ensuring superior solubility in organic solvent systems, these solvent dyes are applied as dispersion in a water bath. The dye is commonly known as disperse dye have wide application for coloration of polyester fibers. In contrast to ordinary dyes, our solvent dyes are pure in nature and contain low amount of impurities. Catering to the special needs of plastics coloration, these dyes can withstand over 350°C of temperature during extrusion and injection moulding process. The dyes are best for coloring a variety of solid materials, such as nylon, polyester, acetates, PVC, acrylics, PMMA, polystyrene, PETP and styrene monomers.<br><br>",
+            "categoryArray": [
+                {
+                    "category": "Solvent Dyes",
+                    "category_id": "solvent-dyes"
+                }
+            ],
+            "tableData": [
+                {
+                    "category": "Solvent Dyes",
+                    "category_id": "solvent-dyes",
+                    "discription": "Parshwanath Group of Industries is a Leading Pigment Powder Manufacturer, Supplier & Exporters in Brazil, Vietnam, Indonesia. Pigment Powder is coloured powder that is used to produce a full range of colours. It is an inert colorant which has no binding power. These pigments are mainly composed of iron oxides and earth colors and contain binding agents.<br><br> Using this powder, we produce all types of paints and colouring material like enamels, acrylics, pastels, chalks, coloured pencils and oils. Further, these pigment powders can also be mixed with colour concrete, plaster, plastic resins, wood putties and epoxy and can also be used for applications such as tinting wood fillers, wood finishing, shading pore filler pastes, colored waxes or for touch-up on furniture.<br><br>",
+                    "title2": "What are Solvent Dyes?",
+                    "discription2": "A solvent dye is a dye soluble in organic solvents. It is usually used as a solution in an organic solvent. Solvent dyes are used to color organic solvents, hydrocarbon fuels, waxes, lubricants, plastics, & other hydrocarbon-based nonpolar materials. Fuel dyes are one use of solvent dyes. Their molecules are typically nonpolar or little polar, and they do not undergo ionization. They are insoluble in water. <br><br> Names of solvent dyes are often generic, of the scheme \"solvent\", eg. Solvent Red 24, Solvent Red 26, Solvent Red 164, Solvent Yellow 124, Solvent Blue 35, etc.<br><br> Red and yellow solvent dyes are often azo dyes, green and blue ones tend to be anthraquinone dyes.<br><br>",
+                    "title3": "Water Soluble Dyes/Solvent green 7",
+                    "discription3": "Water soluble dye is dissolved in water directly without any mediums, and it can keep water clean, transparent, without any impurities and precipitates, in the meantime, it is fluorescent dye. Solvent Green 7 is one of water soluble dyes, it is widely used in fluorescent inks, fluorescent marker pen, aqueous ink, hand sanitizer, shampoo, soap, antifreeze, cutting fluid, water chest, aqueous materials, greases, lubricating oil, cosmetics, trace dye of water quality sysytem, trace dye of boiler system.<br><br>",
+                    "title4": "Oil Soluble Dyes",
+                    "discription4": "is also called oil dye, oil-based dye or solvent based dyes. One type of non-polar organic solvents that is commonly used with oil dyes is petrol. Accordingly, oil solvent dyes are often used in the automotive industry to color petrol fuel and other hydrocarbon based fuel oils. Oil can be colored by oil soluble dyes.In addition, many solvent dyes are used as components by the biological stain manufacturing community to produce stains that will identify various cell structure components in medical diagnostics and scientific research.<br><br> Oil soluble solvent dyes have better temperature stability in engineering plastics, very high brightness and do result in completely transparent plastics without any haze and light scattering. Processing is easy and process parameters like viscosity remain unaffected. Process conditions for engineering plastics like polystyrene, ABS, PC, PMMA, PA and others are quite severe. During extrusion and injection moulding of PC the dyes have to withstand temperatures up to over 350°C for some minutes. Only selected oil solvent dyes do show the needed chemical resistance. Chemical stability also leads to long lasting final products which have to withstand sunlight and weather. As an example red car taillights will last as long as the car itself without loosing the bright red colour. To achieve this, the right transparent polymers and right dyes have to be taken.<br><br> Commodity polymers like Polyethylene, polypropylene, plasticized PVC or rubber are soft at low temperatures. we do not recommend any solvent dyes for coloration of these polymers but pigments have to be used.<br><br> Besides plastics industry, a major application for solvent dyes is printing or solvent based writing ink. Furthermore, oil soluble dyes are widely used in rubbers, oil inks, spinning, waxes, smoke, paints, color paste, transfer printing, marking pens, ball point pens, candles, oil, fats, solvents, bitumen, lubricants, marking inks, inkjet printing inks, dye sublimation printing, glass coloration, signaling smoke, firework and in the pyrotechnics industries, gold imitation, other transparent metallic effects of metallized polyester films, other hydrocarbon-based nonpolar materials.<br><br>",
+                    "title5": "Nigrosin Black",
+                    "discription5": "Nigrosin Blacks include oil soluble nigrosine (color index solvent black 7), spirit soluble nigrosine or alcohol soluble nigrosine (color index solvent black 5), MS conc nigrosine (color index acid black 2) and aniline black (color index pigment black 1). All Nigrosins do show absorption in the infrared light making them suitable for optical character recognition. They are suitable for inkjet inks, ball point pen inks, solvent marker pen inks, water sign pen inks, industrial inks, ribbon inks, carbon paper, shoe polish, plastics, phenolic resin, polyamide resin, urea resin, lacquers, varnishes, wood stains, leather, cotton, flax, metallic products, coatings, alcohol based oil soluble self drying alkyd coatings, nitryl paints, water based coatings, thermosetting coatings, stationery commodities, alcohol based printing ink, plastics application such as acrylic resin, unsaturated polyester resin, fibrin resin, bakelite, polyester alkyd, polyvinyl chloride, polycarbonate,polystyrene, polypropylene, non-water soluble coloring of leather and fur, coatings, printing ink, positive charge conrol agent in electrostatic printing powder, coloring for stationery.<br><br>",
+                    "title6": "Metal-complex Solvent Dyes",
+                    "discription6": "Metal-complex solvent dye is shorted as metal-complex dyes, these are mainly anionic chromium and cobalt complexes of azo dyes. The cation is either a sodium ion or a substituted ammonium ion. These dyes are normally soluble in alcohols, glycolethers, ketones and esters. Solvent dyes of metal complex have a higher colour strength and a higher light stability, because metal particles go into the dyes' molecule.<br><br> Wood stain or wood coating is designed for decorative and protective purposes, it is usually composed of a transparent or semi-transparent colorant solution. The solution penetrates the wood without hiding the grain, and indeed often enhancing it. The main requirements of wood colorants are transparency, high saturation, high brilliance, good bleed and chemical resistance, good solvent compatibility and high light fastness.<br><br> Metal-complex solvent dye is mainly used in wood stains, printing inks, aluminum foil coloring, hot stamping foil coloring, paints, coatings, leather finishes, baking finishes, stationery ink and plastic coatings. Further more, metal-complex solvent dyes own following advantages: 1. excellent solubility; 2. good compatibility with most resins; 3. bright colors; 4. excellent chemical resistance; 5. free of heavy metals; 6. liquid form is available.<br><br>",
+                    "title7": "Uses For Solvent Dyes",
+                    "discription7": "is also called oil dye, oil-based dye or solvent based dyes. One type of non-polar organic solvents that is commonly used with oil dyes is petrol. Accordingly, oil solvent dyes are often used in the automotive industry to color petrol fuel and other hydrocarbon based fuel oils. Oil can be colored by oil soluble dyes.In addition, many solvent dyes are used as components by the biological stain manufacturing community to produce stains that will identify various cell structure components in medical diagnostics and scientific research.<br><br> Oil soluble solvent dyes have better temperature stability in engineering plastics, very high brightness and do result in completely transparent plastics without any haze and light scattering. Processing is easy and process parameters like viscosity remain unaffected. Process conditions for engineering plastics like polystyrene, ABS, PC, PMMA, PA and others are quite severe. During extrusion and injection moulding of PC the dyes have to withstand temperatures up to over 350°C for some minutes. Only selected oil solvent dyes do show the needed chemical resistance. Chemical stability also leads to long lasting final products which have to withstand sunlight and weather. As an example red car taillights will last as long as the car itself without loosing the bright red colour. To achieve this, the right transparent polymers and right dyes have to be taken.<br><br> Commodity polymers like Polyethylene, polypropylene, plasticized PVC or rubber are soft at low temperatures. we do not recommend any solvent dyes for coloration of these polymers but pigments have to be used.<br><br> Besides plastics industry, a major application for solvent dyes is printing or solvent based writing ink. Furthermore, oil soluble dyes are widely used in rubbers, oil inks, spinning, waxes, smoke, paints, color paste, transfer printing, marking pens, ball point pens, candles, oil, fats, solvents, bitumen, lubricants, marking inks, inkjet printing inks, dye sublimation printing, glass coloration, signaling smoke, firework and in the pyrotechnics industries, gold imitation, other transparent metallic effects of metallized polyester films, other hydrocarbon-based nonpolar materials<br><br>",
+                    "title8": "Uses",
+                    "discription8": "<div class=\"usesGrid\"><ul class=\"inner-flex\"><li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Solvent dyes for Inks for rotogravure and rubber stereo printing: for coating copyingpaper and typewriter rib-bons: for ball point pens, and in printing inks as shading and brightening agents and for double tone effects.</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Solvent dyes for Petrol & Fuel Oils</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Solvent dyes for Wax & Candles</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Solvent dyes for Cosmetics</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Solvent dyes for Wood Stain, Spirit & Varnishes.</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Solvent dyes for Coloration of moulding powders. construction material of celluloseacetate. celluloid. poly-styrene. polymethacrylates, PVC. P/F. IJ/F.</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Solvent dyes for Leather- spray finishing of dyed & undyed leather</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p>Solvent dyes for Aluminium foil printing. transparent lacquers. nitrocellulose,cellulose acetate, vinyl, alkyd, other synthetic resins or shellac.</p></li></ul></div>"
+                }
+            ]
+        },
+        {
+            "slug": "pigment-paste-&-emulsions",
+            "name": "Pigment Paste & Emulsions",
+            "img": "assets/images/homepage/homepage-banner.jpg",
+            "title": "Pigment Paste & Emulsions",
+            "shortDiscription": "",
+            "discription": "Parshwanath group of Industries is a reliable name when it comes to buy Textile Pigment Paste of world class quality. The company is a well-reputed Manufacturer and Supplier of Textile Pigment paste that cater to diverse requirements of plastic, textile, and paper industries. Specially manufactured from good quality raw materials, our Textile Pigment Paste are the best choice available in the markets. We deal in different types of Textile Pigment Paste that includes Black MV, Blue MB, Orange M5G, Red MGR and so on. The clients can avail these Textile Pigment Paste in different packaging choices, at very reasonable prices. <br><br> We are offering Pigment Paste & Emulsions that is used in textile, paint, detergent paper, ink industry, soap industry and many others. These emulsions and well-certified formulations, are recognized for their purity and color fastness.<br><br> Pigment paste and emulsion is high dispersed suspension of pigments, which is formed with the mixture of water and pigment auxiliaries.<br><br>Features : Stability, bright color, fineness, color fastness, non conductive, temperature resistant and chemical resistant.<br> Storage Conditions : Shady and dry place<br> Usage Condition : Stir well before use <br><br>",
+            "categoryArray": [
+                {
+                    "category": "Pigment Paste & Emulsions",
+                    "category_id": "pigment-paste-&-emulsions"
+                }
+            ],
+            "tableData": [
+                {
+                    "category": "Pigment Paste & Emulsions",
+                    "category_id": "pigment-paste-&-emulsions",
+                    "title8": "Used In",
+                    "discription8": "<div class=\"usesGrid\"><ul class=\"two-col-grid small-gap\"><li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p> Plastic Industries</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p> Textile Industries</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p> Leather Industries</p></li> <li class=\"flex-row alc \"><img src=\"https://dummyimage.com/50x50/c1c1c1/c1c1c1\" alt=\"\"><p> Paper Industries</p></li> </ul></div>"
+                }
+            ]
+        },
+        {
+            "slug": "titanium-dioxide",
+            "name": "Titanium Dioxide",
+            "img": "assets/images/homepage/2-Food-Colour-banner.jpg",
+            "title": "Titanium Dioxide",
+            "shortDiscription": "",
+            "discription": "Parshwanath Dyestuff Industries in collaboration with a German Company introduces three types of Titanium Dixoide Products. These products are available in Food, Rutile And Anatase Grades and are used in various industries including, inks, dyestuff, paints, plastic and many others. Each batch goes through strict quality checking before being delivered to the client.<br><br>",
+            "categoryArray": [
+                {
+                    "category": "Titanium Dioxide Raktan PR999 (Rutile Grade)",
+                    "category_id": "titanium-dioxide-raktan-pr999"
+                },
+                {
+                    "category": "Titanium Dioxide Raktan PA101 (Anataser Grade)",
+                    "category_id": "titanium-dioxide-raktan-pa101"
+                },
+                {
+                    "category": "Titanium Dioxide Raktan PF200 (Food Grade)",
+                    "category_id": "titanium-dioxide-raktan-pf200"
+                }
+            ],
+            "tableData": [
+                {
+                    "category": "Titanium Dioxide Raktan PR999 (Rutile Grade)",
+                    "category_id": "titanium-dioxide-raktan-pr999",
+                    "discription": "",
+                    "title2": "Titanium Dioxide Rutile",
+                    "discription2": "Titanium dioxide rutile grade owns R crystalline form, which is a very stable, and it decides rutile titanium dioxide exhibiting excellent performances, excellent weather resistance, high temperature fastness, good anti-yellowing, more blue undertone. The product is more suitable for outdoor applicatinos. RUSHVI FINECHEM PVT LTD produce rutile titanium dioxide by sulfate process and chloride process, sulfate process titanium dioxide rutile pigment is more economic, this pigment can be applicable for all kinds of areas, paints and coatings, plastics and master batches, paper, printing inks, synthetic fibers, ceramic etc. Compared with sulfate process, titanium dioxide rutile chloride process has better dispersion, more blue undertone, higher coloring strength and opacity, as well as better fastness.<br><br>",
+                    "storageTitle": "Storage",
+                    "storageDiscrtion": "Keep the product un-stacked in dry and closed rooms at normal temperature and air humidity. To achieve best possible results, we recommend storage under the condition stated above and use within 12 months from delivery.<br><br> * Typical Properties not to be construed as specifications.<br><br>",
+                    "title3": "Titanium Dioxide Anatase",
+                    "discription3": "Anatase Titanium Dioxide, A crystalline form, turns to rutile grade when heated to more than 700°C, becomes yellow tone when temperature higher than 400°C, worse durability, lightfastness and tinting strength than rutile grade. This pigment exhibits good light scattering strength, high whiteness, strong hiding power, good weather fastness. Hence, titanium dioxide anatase grade is mainly used in papers, printing inks, textile and fiber, rubber, but also available for indoor industrial coatings, plastics, ceramics.<br><br> In papers applications, titanium dioxide anatase grade plays the role in fluorescence and whitening. In printing inks applications, this product is mainly used to be colorant in high grade printing inks. In textiles and fibers applications, this pigment is deluster. In rubbers applications, titanium dioxide anatase pigment is not only a colorant also reinforcing agent, anti-aging agent and filling agent.<br><br>",
+                    "title4": "Titanium Dioxide RAKTAN PR999 (Rutile Grade)",
+                    "discription4": "Titanium Dioxide PR999 is a high quality Rutile Grade Titanium Dioxide used in Paints, Plastics, Ink, Textiles etc. The PR999 is equivalent to grades KMM822, Dupont R902+ and many other standard grades for Rutile.<br><br> PR999 is an excellent high grade rutile titanium dioxide pigment designed with good gloss, excellent opacity, easy dispersion and nice whiteness.<br><br>      Applications : It is recommended for evaluation in<br>Both interior and exterior painting.<br> Solvent and water painting.Both interior and exterior painting.<br>Masterbatch, plastic, PVC.<br>Inks, leather, rubber, textiles etc <br><br>",
+                    "title8": "Uses",
+                    "discription8": ""
+                },
+                {
+                    "category": "Titanium Dioxide Raktan PA101 (Anataser Grade)",
+                    "category_id": "titanium-dioxide-raktan-pa101",
+                    "discription": "Titanium Dioxide PA101 is high quality Anatase Grade Titanium Dioxide used in Paints, Plastics, Textiles, Soap etc. The PA101 is equivalent to grades TTK Anatase ISI and many other standard grades for Anatase. <br> <br> P A101 is an Anatase Titanium Dioxide pigment manufactured on the basis of advanced technology. It is actively treated with unique surface dispersion technology by adding inorganic additives which can reduce the surface force between the particles of titanium dioxide, enhance the powder dry flow ability, greatly improve the dispersion properties. PA101 is a high cost effective product aiming at the demand of market with good dispersion, good whiteness, high hiding and tinting strength, low oil absorption. <br> <br>",
+                    "storageTitle": "Storage Recommendations",
+                    "storageDiscrtion": "Keep the product stored in sealed original packaging in cool, ventilated, dry place, protected from sunlight."
+                },
+                {
+                    "category": "Titanium Dioxide Raktan PF200 (Food Grade)",
+                    "category_id": "titanium-dioxide-raktan-pf200",
+                    "discription": "Titanium Dioxide PF200 is high quality Food Grade Titanium Dioxide featuring very high purity, extremely low heavy-metal, and also has superior pigment performance such as bright-white gloss, excellent hiding power and tinting strength, very good dispersion and chemical stability. The combined properties of PF200 is similar to those international brands Titanium dioxide used in medicine, food and cosmetic industries, etc.<br><br> Titanium dioxide is a compound whose formula is TiO2.As a food additive it is used to attenuate some other color tinge present in the food. The chemical purity of titanium dioxide confirms with the requirements for use as additive in food and tobacco products in Europe,US,Asia and World. <br> <br>",
+                    "storageTitle": "Storage Recommendations",
+                    "storageDiscrtion": "Keep the product stored in sealed original packaging in cool,ventilated, dry place, protected from sunlight."
+                }
+            ]
+        },
+        {
+            "slug": "dyes-intermediate",
+            "name": "Dyes Intermediate",
+            "img": "assets/images/homepage/3-Direct-Dyes.jpg",
+            "title": "Dyes Intermediate",
+            "shortDiscription": "Our high quality dyes Intermediate are manufactured & designed to permanently dye.",
+            "discription": "",
+            "categoryArray": [
+                {
+                    "category": "C Acid",
+                    "category_id": "c-acid"
+                },
+                {
+                    "category": "European k Acid",
+                    "category_id": "european-k-acid"
+                },
+                {
+                    "category": "Amido Epsilon Acid",
+                    "category_id": "amido-epsilon-acid"
+                },
+                {
+                    "category": "Sulpho C Acid",
+                    "category_id": "sulpho-c-acid"
+                },
+                {
+                    "category": "K Acid",
+                    "category_id": "k-acid"
+                },
+                {
+                    "category": "Schaffer Acid ",
+                    "category_id": "Schaffer-acid"
+                },
+                {
+                    "category": "Gamma Acid",
+                    "category_id": "gamma-acid"
+                },
+                {
+                    "category": "H Acid",
+                    "category_id": "h-acid"
+                },
+                {
+                    "category": "G Salt",
+                    "category_id": "g-salt"
+                },
+                {
+                    "category": "Sulpho Gamma Acid",
+                    "category_id": "sulpho-gamma-acid"
+                },
+                {
+                    "category": "Sulpho J Acid",
+                    "category_id": "sulpho-j-acid"
+                }
+            ],
+            "tableData": [
+                {
+                    "category": "c acid",
+                    "category_id": "c-acid"
+                },
+                {
+                    "category": "European k Acid",
+                    "category_id": "european-k-acid"
+                },
+                {
+                    "category": "Amido Epsilon Acid",
+                    "category_id": "amido-epsilon-acid"
+                },
+                {
+                    "category": "Sulpho C Acid",
+                    "category_id": "sulpho-c-acid"
+                },
+                {
+                    "category": "K Acid",
+                    "category_id": "k-acid"
+                },
+                {
+                    "category": "Schaffer Acid (Sodium Salt)",
+                    "category_id": "Schaffer-acid"
+                },
+                {
+                    "category": "Gamma Acid",
+                    "category_id": "gamma-acid"
+                },
+                {
+                    "category": "H Acid",
+                    "category_id": "h-acid"
+                },
+                {
+                    "category": "G Salt",
+                    "category_id": "g-salt"
+                },
+                {
+                    "category": "Sulpho Gamma Acid",
+                    "category_id": "sulpho-gamma-acid"
+                },
+                {
+                    "category": "Sulpho J Acid",
+                    "category_id": "sulpho-j-acid"
                 }
             ]
         }

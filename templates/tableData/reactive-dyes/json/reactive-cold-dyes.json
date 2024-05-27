@@ -8,54 +8,60 @@
     },
     {
      "Title": "Reactive Red M5B\nReactive Red - 2",
-     "Title-2": "4-5",
-     "Column4": "4-5",
-     "Column5": "3-4",
-     "Column6": 1,
-     "Column7": "P"
-    },
-    {
-     "Title": "Reactive Red M8B\nReactive Red - 11",
-     "Title-2": "4-5",
-     "Column4": "4-5",
-     "Column5": 2,
-     "Column6": 4,
-     "Column7": "P"
-    },
-    {
-     "Title": "Reactive Magenta MB\nReactive Violet - 13",
-     "Title-2": "4-5",
-     "Column4": 5,
-     "Column5": "4-5",
-     "Column6": 1,
-     "Column7": "F"
-    },
-    {
-     "Title": "Reactive Orange M2R\nReactive Orange - 4",
-     "Title-2": 5,
-     "Column4": 5,
-     "Column5": 4,
-     "Column6": 4,
-     "Column7": "P"
-    },
-    {
-     "Title": "Reactive Orange M2RJ",
-     "Title-2": "3-4",
-     "Column4": 4,
-     "Column5": 4,
-     "Column6": "4-5",
-     "Column7": "P"
-    },
-    {
-     "Title": "Reactive Gol. Yellow MR\nReactive Yellow - 44",
-     "Title-2": 5,
-     "Column4": "4-5",
-     "Column5": 4,
-     "Column6": 1,
-     "Column7": "P"
-    },
+    "color" : "#CA5501", 
+    "Title-2": "4-5",
+    "Column4": "4-5",
+    "Column5": "3-4",
+    "Column6": 1,
+    "Column7": "P"
+},
+{
+    "Title": "Reactive Red M8B\nReactive Red - 11",
+    "color" : "#A60042", 
+    "Title-2": "4-5",
+    "Column4": "4-5",
+    "Column5": 2,
+    "Column6": 4,
+    "Column7": "P"
+},
+{
+    "Title": "Reactive Magenta MB\nReactive Violet - 13",
+    "color" : "#840084", 
+    "Title-2": "4-5",
+    "Column4": 5,
+    "Column5": "4-5",
+    "Column6": 1,
+    "Column7": "F"
+},
+{
+    "Title": "Reactive Orange M2R\nReactive Orange - 4",
+    "color" : "#FF6600", 
+    "Title-2": 5,
+    "Column4": 5,
+    "Column5": 4,
+    "Column6": 4,
+    "Column7": "P"
+},
+{
+    "Title": "Reactive Orange M2RJ",
+    "color" : "#D92C00", 
+    "Title-2": "3-4",
+    "Column4": 4,
+    "Column5": 4,
+    "Column6": "4-5",
+    "Column7": "P"
+},
+{
+    "Title": "Reactive Gol. Yellow MR\nReactive Yellow - 44",
+    "Title-2": 5,
+    "Column4": "4-5",
+    "Column5": 4,
+    "Column6": 1,
+    "Column7": "P"
+},
     {
      "Title": "Reactive Yellow MR EX H\/C\nReactive Yellow - 44",
+     "color" : "#FF9933", 
      "Title-2": 5,
      "Column4": "4-5",
      "Column5": 4,
@@ -64,6 +70,7 @@
     },
     {
      "Title": "Reactive Yellow M3R\nReactive Yellow - 36",
+     "color" : "#F47A00", 
      "Title-2": 6,
      "Column4": 5,
      "Column5": 4,
@@ -72,6 +79,7 @@
     },
     {
      "Title": "Reactive Yellow M4R\nReactive Orange - 14",
+     "color" : "#D26900", 
      "Title-2": 5,
      "Column4": "4-5",
      "Column5": 4,
@@ -80,6 +88,7 @@
     },
     {
      "Title": "Reactive Yellow M8G\nReactive Yellow - 86",
+     "color" : "#FCF018", 
      "Title-2": 6,
      "Column4": "4-5",
      "Column5": "4-5",
@@ -88,6 +97,7 @@
     },
     {
      "Title": "Reactive Yellow M4G\nReactive Yellow - 22",
+     "color" : "#F2F200", 
      "Title-2": 6,
      "Column4": 4,
      "Column5": 5,
@@ -95,15 +105,17 @@
      "Column7": "G"
     },
     {
-     "Title": "Reactive Yellow MGR\nReactive Yellow - 7",
-     "Title-2": 6,
-     "Column4": 5,
+        "Title": "Reactive Yellow MGR\nReactive Yellow - 7",
+        "color" : "#FF9933", 
+        "Title-2": 6,
+        "Column4": 5,
      "Column5": "4-5",
      "Column6": "4-5",
      "Column7": "P"
     },
     {
      "Title": "Reactive Violet C4R\nReactive Violet - 12",
+     "color" : "#000082", 
      "Title-2": 4,
      "Column4": 3,
      "Column5": 4,
@@ -111,15 +123,17 @@
      "Column7": "P"
     },
     {
-     "Title": "Reactive Violet C2R\nReactive Violet - 14",
-     "Title-2": "3-4",
-     "Column4": 3,
+        "Title": "Reactive Violet C2R\nReactive Violet - 14",
+        "color" : "#000099", 
+        "Title-2": "3-4",
+        "Column4": 3,
      "Column5": 4,
      "Column6": 1,
      "Column7": "P"
     },
     {
      "Title": "Reactive Blue MR\nReactive Blue - 4",
+     "color" : "#004F9D", 
      "Title-2": 6,
      "Column4": 5,
      "Column5": 5,
@@ -127,15 +141,17 @@
      "Column7": "P"
     },
     {
-     "Title": "Reactive Blue M2R\nReactive Blue - 81",
-     "Title-2": 6,
-     "Column4": 5,
+        "Title": "Reactive Blue M2R\nReactive Blue - 81",
+        "color" : "#002E5B", 
+        "Title-2": 6,
+        "Column4": 5,
      "Column5": "4-5",
      "Column6": 1,
      "Column7": "P"
     },
     {
      "Title": "Reactive Blue M2R H\/C\nReactive Blue - 81",
+     "color" : "#002F5E", 
      "Title-2": 6,
      "Column4": 5,
      "Column5": "4-5",
@@ -144,6 +160,7 @@
     },
     {
      "Title": "Reactive Navy Blue M3R\nReactive Blue - 9",
+     "color" : "#000051", 
      "Title-2": 5,
      "Column4": "4-5",
      "Column5": 3,
@@ -152,6 +169,7 @@
     },
     {
      "Title": "Reactive Blue M4GD H\/C\nReactive Blue - 168",
+     "color" : "#000040", 
      "Title-2": 6,
      "Column4": 5,
      "Column5": "3-4",
@@ -159,15 +177,17 @@
      "Column7": "P"
     },
     {
-     "Title": "Reactive Tur. Blue MGN\nReactive Blue - 140",
-     "Title-2": 6,
-     "Column4": 4,
+        "Title": "Reactive Tur. Blue MGN\nReactive Blue - 140",
+        "color" : "#00BBEA", 
+        "Title-2": 6,
+        "Column4": 4,
      "Column5": 4,
      "Column6": "2-3",
      "Column7": "P"
     },
     {
      "Title": "Reactive Tur. Blue Ha5G\nReactive Blue - 71",
+     "color" : "#009ED2", 
      "Title-2": 6,
      "Column4": "3-4",
      "Column5": "4-5",
@@ -175,4 +195,5 @@
      "Column7": "P"
     }
    ]
+   
    

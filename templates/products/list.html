@@ -1,0 +1,72 @@
+<div class="parshwadyes-main-wrapper">
+    <div class="parshwadyes-list-wrapper inner-flex sect-gap" id="parshwadyes-detail-wrapper">
+        <section class="parshwadyes-home-section-one relative" id="parshwadyes-home-section-one">
+            <ks-swiper-container override-parameters="homeBannerSwiper">
+                <ks-swiper-slide ng-repeat="data in productList">
+                    <div class="banner-img h100">
+                        <img src="{{data.img}}" class="h100" alt="">
+                    </div>
+                    <div class="banner-pagination-container inner-flex alc">
+                        <div class="home-banner-pagination link-fonts" ng-if="$index <= 9">
+                            <p class="white-color">
+                                0{{$index + 1}}
+                            </p>
+                        </div>
+                        <div class="home-banner-pagination link-fonts" ng-if="$index > 9">
+                            <p class="white-color">
+                                {{$index + 1}}
+                            </p>
+                        </div>
+                        <div class="down-arrow" ng-click="scrollToDiv('parshwadyes-home-section-two')">
+                            <img src="assets/images/icons/down-arrow.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="banner-text inner-flex small-gap alc text-center">
+                        <div class="banner-title ">
+                            <h1 class="white-color bold-fonts"> {{data.name}} </h1>
+                        </div>
+                        <div class="section-subtitle">
+                            <h3 class="white-color">Our high quality pigment paste & emulsions are manufactured <br
+                                    class="hidden-xs"> & designed to permanenetly dye. </h3>
+                        </div>
+                    </div>
+                </ks-swiper-slide>
+            </ks-swiper-container>
+        </section>
+
+        <section class="parshwadyes-home-section-two  relative" id="parshwadyes-home-section-two">
+            <div class="main-container">
+                <div class="inner-flex big-gap">
+                    <div class="home-title section-smalltitle  flex-row alc">
+                        <span class="dot"></span>
+                        <h4 class="gray-color">Products</h4>
+                    </div>
+                    <div class="productListGrid">
+                        <div class="productListItem hoverParent" ng-repeat="data in productList">
+                            <a href="dyes/{{data.slug}}" class="inner-flex">
+
+                                <div class="productImg">
+                                    <img src="{{data.img}}" class='border-radius' alt="">
+                                </div>
+                                <div class="productName flex-row j-c-sb alc">
+                                    <div class="section-content">
+                                        <p class="medium-fonts">
+                                            {{data.name}}
+                                        </p>
+                                    </div>
+                                    <div class="product-arrow ">
+                                        <img src="assets/images/icons/diagonal-arrow.svg" class="hover-enable" alt="">
+                                        <img src="assets/images/icons/diagonal-arrow-red.svg" class="hover-disable"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>

@@ -31,7 +31,7 @@
                         <div class="footer-links link-fonts">
                             <ul class="inner-flex">
                                 <li>
-                                    <a href="/" ng-class="{'active'  : activePath = '/' }">
+                                    <a href="{{base_url}}" ng-class="{'active'  : activePath = '/' }">
                                         Home
                                     </a>
                                 </li>
@@ -43,6 +43,11 @@
                                 <li>
                                     <a href="/quality" ng-class="{'active'  : activePath = '/quality' }">
                                         Quality
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/contact" ng-class="{'active'  : activePath = '/contact' }">
+                                        Agent or Seller
                                     </a>
                                 </li>
                                 <li>
@@ -63,12 +68,12 @@
                         </div>
                         <div class="footer-links link-fonts">
                             <ul class="inner-flex">
-                                <li>
-                                    <a href="/" ng-class="{'active'  : activePath = '/' }">
-                                        Reactive Dyes
+                                <li ng-repeat="data in dyeList">
+                                    <a href="dyes/{{data.slug}}" ng-class="{'active'  : activePath = '/dyes' }">
+                                        {{data.name}}
                                     </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="/about" ng-class="{'active'  : activePath = '/about' }">
                                         Food & Lake Colors
                                     </a>
@@ -87,7 +92,7 @@
                                     <a href="/contact" ng-class="{'active'  : activePath = '/contact' }">
                                         Wood Stain Dyes
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>

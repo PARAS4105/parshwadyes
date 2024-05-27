@@ -6,7 +6,7 @@
                 <img src="assets/images/contact/contact-us-bg.jpg" class="h100" alt="">
             </div>
             <div class="banner-pagination-container inner-flex alc">
-                <div class="home-banner-pagination ">
+                <div class="home-banner-pagination " ng-click="scrollToDiv('parshwadyes-contact-section-two')">
                     <div class="down-arrow">
                         <img src="assets/images/icons/down-arrow.svg" alt="">
                     </div>
@@ -15,7 +15,7 @@
 
             <div class="banner-text inner-flex small-gap alc text-center">
                 <div class="banner-title ">
-                    <h1 class="white-color">Contact Us</h1>
+                    <h1 class="white-color bold-fonts">Contact Us</h1>
                 </div>
                 <div class="section-subtitle">
                     <h3 class="white-color">It's nice to connect with you</h3>
@@ -30,7 +30,7 @@
                     <div class="section-content flex-row sect2flex_catagory sec2_head">
                         <div class="sec2heading" ng-repeat="data in TabPanalData " ng-click="contactClick(data) "
                             ng-class="{active : tabObj.catagory == data.catagory }">
-                            <p class="gray-color"> {{ data.catagory}}&nbsp;<span ng-if="$index < TabPanalData.length - 1 " class="secondary-color">/</span>&nbsp;
+                            <p class="gray-color medium-fonts"> {{ data.catagory}}&nbsp;<span ng-if="$index < TabPanalData.length - 1 " class="secondary-color">/</span>&nbsp;
                             </p>
                         </div>
                     </div>

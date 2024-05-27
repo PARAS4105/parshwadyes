@@ -101,6 +101,12 @@
     .header-wrapper {
         padding: 1.5rem 0;
     }
+    .parshwadyes-home-section-one {
+        height: 100svh;
+    }
+    .productListGrid{
+        grid-template-columns: repeat( 2 , 1fr );
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -161,6 +167,9 @@
         padding: 1rem 0;
     }
 
+    .productListGrid{
+        grid-template-columns: repeat( 1 , 1fr );
+    }
 
 }
 

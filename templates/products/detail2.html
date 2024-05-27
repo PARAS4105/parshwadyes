@@ -1,0 +1,901 @@
+<div class="parshwadyes-main-wrapper">
+    <div class="parshwadyes-detail-wrapper inner-flex sect-gap" id="parshwadyes-detail-wrapper">
+        <section class="parshwadyes-home-section-one relative" id="parshwadyes-home-section-one">
+            <div class="banner-img h100">
+                <img src="{{producttDetailObj.img}}" class="h100" alt="">
+            </div>
+
+            <div class="banner-text inner-flex small-gap alc text-center">
+                <div class="banner-title ">
+                    <h1 class="white-color bold-fonts">{{producttDetailObj.title}}</h1>
+                </div>
+                <div class="section-subtitle">
+                    <h3 class="white-color">It's nice to connect with you</h3>
+                </div>
+
+            </div>
+
+
+            <div class="banner-pagination-container inner-flex alc">
+                <div class="home-banner-pagination link-fonts">
+                    <div class="down-arrow">
+                        <img src="assets/images/icons/down-arrow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="parshwadyes-home-section-two  relative" id="parshwadyes-home-section-two">
+            <div class="main-container">
+                <div class="inner-flex big-gap ">
+                    <div class="two-col-grid  medium-mob-gap detaildiscription ">
+                        <div class="inner-flex  ">
+                            <div class="home-title section-smalltitle  flex-row alc">
+                                <span class="dot"></span>
+                                <h4 class="gray-color">Products</h4>
+                            </div>
+
+                            <div class="section-title ">
+                                <h2 class="medium-fonts"> {{producttDetailObj.title}} </h2>
+                            </div>
+                        </div>
+                        <div class="inner-flex  ">
+                            <div class="home-title section-smalltitle  flex-row alc hidden-sm hidden-xs">
+                                <h4 class="gray-color">&nbsp;</h4>
+                            </div>
+                            <div class="home-title section-smalltitle  flex-row alc hidden-sm hidden-xs">
+                                <h4 class="gray-color">&nbsp;</h4>
+                            </div>
+                            <div class="section-content"
+                                ng-if="producttDetailObj.discription && producttDetailObj.discription != '' ">
+                                <p class="gray-color readmore_text" read-more dd-text-collapse-max-length="350"
+                                    dd-text-collapse-text="{{producttDetailObj.discription}}">
+
+                                </p>
+                            </div>
+
+                            <div class="about-btn flex-row wfc alc" ng-if="producttDetailObj.discription == ''  ">
+                                <a href="dye-list">
+                                    <button class="gradient-btn  common-link-btn">
+                                        Inquiry
+                                        <img src="assets/images/icons/rounded-diagonal-arrow.svg" class="btn-icon"
+                                            alt="">
+                                    </button>
+                                </a>
+                                <a href="dye-list">
+                                    <button class="pdficon">
+                                        <img src="assets/images/icons/pdf-download.svg" class="btn-icon pdficon_white"
+                                            alt="">
+                                        <img src="assets/images/icons/pdf-download-hover.svg"
+                                            class="btn-icon pdficon_hover" alt="">
+                                    </button>
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="two-col-grid  alend" ng-if="producttDetailObj.discription != ''">
+                        <div class="inner-flex  ">
+                            &nbsp;
+                        </div>
+                        <div class="about-btn flex-row wfc alc">
+                            <a href="dye-list">
+                                <button class="gradient-btn  common-link-btn">
+                                    Inquiry
+                                    <img src="assets/images/icons/rounded-diagonal-arrow.svg" class="btn-icon" alt="">
+                                </button>
+                            </a>
+                            <a href="dye-list">
+                                <button class="pdficon">
+                                    <img src="assets/images/icons/pdf-download.svg" class="btn-icon pdficon_white"
+                                        alt="">
+                                    <img src="assets/images/icons/pdf-download-hover.svg" class="btn-icon pdficon_hover"
+                                        alt="">
+                                </button>
+
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="parshwadyes-home-section-two  relative" id="parshwadyes-home-section-two"
+            ng-if="producttDetailObj.categoryArray.length > 1">
+            <div class="main-container">
+                <div class="">
+                    <div class="inner-flex section-padding pb0 medium-gap sec2_bordar">
+                        <div class="home-title section-smalltitle flex-row alc">
+                            <span class="dot"></span>
+                            <h4 class="gray-color">Categories</h4>
+                        </div>
+
+                        <div class="section-content flex-row sect2flex_catagory product_sec2_tab ">
+                            <div class="sec2heading" ng-repeat="data in producttDetailObj.categoryArray"
+                                ng-click="tabClick(data.category); scrollToDiv(data.category_id);"
+                                ng-class="{active : tabObj == data.category }">
+                                <p class="brown-color capitalize">{{data.category}} &nbsp;<span
+                                        ng-if="$index < producttDetailObj.categoryArray.length - 1"
+                                        class="secondary-color">/</span>&nbsp;
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="parshwadyes-detail-section-two section-padding-half  relative"
+                        id="parshwadyes-detail-section-two  " ng-repeat="data in producttDetailObj.tableData">
+
+                        <div class="table_grid medium-gap inner-flex-mob" id="{{data.category_id}}">
+                            <div class=" section-second-title  tableSec3text"
+                                ng-class="{'section-padding-half' : data.discription || data.discription2 || data.discription3 }">
+                                <h2 class="secondary-color capitalize medium-fonts">{{data.category}} <sup
+                                        class="brown-color">
+                                        0{{$index + 1 }}</sup> <br> </h2>
+                            </div>
+                            <div class="tableSec3table inner-flex medium-gap">
+
+                                <div class="inner-flex section-padding-half product-discription-padding"
+                                    ng-if="data.title2 || data.discription2">
+                                    <div class="section-paragraph" ng-if="data.title2">
+                                        <p class="secondary-color"> {{data.title2}} </p>
+                                    </div>
+                                    <div class="section-content" ng-if="data.discription2">
+                                        <p ng-bind-html="data.discription2"> </p>
+                                    </div>
+                                </div>
+                                <div class="inner-flex section-padding-half product-discription-padding"
+                                    ng-if="data.title3 || data.discription3">
+                                    <div class="section-paragraph" ng-if="data.title3">
+                                        <p class="secondary-color"> {{data.title3}} </p>
+                                    </div>
+                                    <div class="section-content" ng-if="data.discription3">
+                                        <p ng-bind-html="data.discription3"> </p>
+                                    </div>
+                                </div>
+                                <div class="inner-flex section-padding-half product-discription-padding"
+                                    ng-if="data.title4 || data.discription4">
+                                    <div class="section-paragraph" ng-if="data.title4">
+                                        <p class="secondary-color"> {{data.title4}} </p>
+                                    </div>
+                                    <div class="section-content" ng-if="data.discription4">
+                                        <p ng-bind-html="data.discription4"> </p>
+                                    </div>
+                                </div>
+                                <div class="inner-flex section-padding-half product-discription-padding"
+                                    ng-if="data.title5 || data.discription5">
+                                    <div class="section-paragraph" ng-if="data.title5">
+                                        <p class="secondary-color"> {{data.title5}} </p>
+                                    </div>
+                                    <div class="section-content" ng-if="data.discription5">
+                                        <p ng-bind-html="data.discription5"> </p>
+                                    </div>
+                                </div>
+                                <div class="inner-flex section-padding-half product-discription-padding"
+                                    ng-if="data.title6 || data.discription6">
+                                    <div class="section-paragraph" ng-if="data.title6">
+                                        <p class="secondary-color"> {{data.title6}} </p>
+                                    </div>
+                                    <div class="section-content" ng-if="data.discription6">
+                                        <p ng-bind-html="data.discription6"> </p>
+                                    </div>
+                                </div>
+                                <div class="inner-flex section-padding-half product-discription-padding"
+                                    ng-if="data.title7 || data.discription7">
+                                    <div class="section-paragraph" ng-if="data.title7">
+                                        <p class="secondary-color"> {{data.title7}} </p>
+                                    </div>
+                                    <div class="section-content" ng-if="data.discription7">
+                                        <p ng-bind-html="data.discription7"> </p>
+                                    </div>
+                                </div>
+                                <div class="inner-flex section-padding-half product-discription-padding"
+                                    ng-if="data.title8 || data.discription8">
+                                    <div class="section-paragraph" ng-if="data.title8">
+                                        <p class="secondary-color"> {{data.title8}} </p>
+                                    </div>
+                                    <div class="section-content" ng-if="data.discription8">
+                                        <p ng-bind-html="data.discription8"> </p>
+                                    </div>
+                                </div>
+                                <div class="inner-flex section-padding-half product-discription-padding"
+                                    ng-if="data.title9 || data.discription9">
+                                    <div class="section-paragraph" ng-if="data.title9">
+                                        <p class="secondary-color"> {{data.title9}} </p>
+                                    </div>
+                                    <div class="section-content" ng-if="data.discription9">
+                                        <p ng-bind-html="data.discription9"> </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="section-content section-table-discription sect ion-padding-half product-discription-padding "
+                                    ng-if="data.discription && data.discription != '' ">
+                                    <p class="primary-color readmore_text" read-more dd-text-collapse-max-length="350"
+                                        dd-text-collapse-text="{{data.discription}}">
+                                    </p>
+                                </div>
+
+
+                                <div class="product_table_wraper ">
+                                    <div class="table_full_wraper">
+
+                                        <!-- Dyes Intermediate Start -->
+
+                                        <table class="product_table product_table_60" vspace="0" hspace="0"
+                                            ng-if="data.category_id == 'c-acid'">
+                                            <tbody>
+                                                <tr class="bless">
+                                                    <td class="font-18 bless  border-radius-top-left border-radius-top-right"
+                                                        width="100%" align="CENTER" colspan="2" bgcolor="#FFF6F1">
+                                                        <strong>Specification</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PRODUCT NAME</strong></td>
+                                                    <td> C ACID (CASSELLA'S ACID)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CHEMICAL NAME</strong></td>
+                                                    <td> 2-NAPHTHYLAMINE 4,8 DISULFONIC ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CAS NO.</strong></td>
+                                                    <td> 131-27-1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>EMPIRICAL FORMULA</strong></td>
+                                                    <td> C10H9NO6S2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>MOLECULAR WEIGHT</strong></td>
+                                                    <td>303</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>STRUCTURAL FORMULA</strong></td>
+                                                    <td><img class="w25"
+                                                            src="assets/images/dyes_intermediate/european-k.jpg" alt="">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>FORM SUPPLIED</strong></td>
+                                                    <td> DRY POWDER</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PHYSICAL APPEARANCE</strong></td>
+                                                    <td> LIGHT PINKISH</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>SALES BASIS</strong></td>
+                                                    <td> ON 100 % BASIS</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PACKING</strong></td>
+                                                    <td> HDPE BAG WITH PE LINER</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>ASSAY</strong></td>
+                                                    <td> 70 % MIN.(ON MOL WT : 303)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>INSOLUBLES</strong></td>
+                                                    <td> 0.2 % MAX.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>SOLUBILITY</strong></td>
+                                                    <td> CLEAR SOLUTION IN DILUTE ALKALI</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="product_table product_table_60" vspace="0" hspace="0"
+                                            ng-if="data.category_id == 'european-k-acid'">
+                                            <tbody>
+                                                <tr class="bless">
+                                                    <td class="font-18 bless  border-radius-top-left border-radius-top-right"
+                                                        width="100%" align="CENTER" colspan="2" bgcolor="#FFF6F1">
+                                                        <strong>Specification</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PRODUCT NAME</strong></td>
+                                                    <td>EUROPEAN K ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CHEMICAL NAME</strong></td>
+                                                    <td>1-AMINO-8-NAPHTHOL,4,6 DISULPHONIC ACID&nbsp; <br> 8-AMINO 1
+                                                        NAPHTHOL
+                                                        3,5 DISULPHONIC ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CAS NO.</strong></td>
+                                                    <td> 40130-23-4-FREE ACID,40492-14-6-MONO SOD.SALT</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>EMPIRICAL FORMULA</strong></td>
+                                                    <td> C10H9NO7S2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>STRUCTURAL FORMULA</strong></td>
+                                                    <td> <img class="w25" src="assets/images/dyes_intermediate/pro3.jpg"
+                                                            alt=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>FORM SUPPLIED</strong></td>
+                                                    <td> DRIED POWDER</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PHYSICAL APPEARANCE</strong></td>
+                                                    <td> GREYISH OFF WHITE COLOUR</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>SALES BASIS</strong></td>
+                                                    <td> ON 100 % BASIS</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PACKING</strong></td>
+                                                    <td> HDPE BAG WITH PE LINER&amp; JUMBO BAG</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>ASSAY</strong></td>
+                                                    <td> 75 % MIN.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>INSOLUBLES</strong></td>
+                                                    <td>&nbsp; 0.2 % MAX.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>SOLUBILITY</strong></td>
+                                                    <td> SOLUBLE IN WATER</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="product_table product_table_60" vspace="0" hspace="0"
+                                            ng-if="data.category_id == 'amido-epsilon-acid'">
+                                            <tbody>
+                                                <tr class="bless">
+                                                    <td class="font-18 bless  border-radius-top-left border-radius-top-right"
+                                                        width="100%" align="CENTER" colspan="2" bgcolor="#FFF6F1">
+                                                        <strong>Specification</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PRODUCT NAME</strong></td>
+                                                    <td>AMIDO EPSILON ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CHEMICAL NAME</strong></td>
+                                                    <td>1 NAPHTHOL 3,8 DISULPHONIC ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>MOLECULAR WEIGHT</strong></td>
+                                                    <td>303</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>STRUCTURAL FORMULA</strong></td>
+                                                    <td><img class="w25" src="assets/images/dyes_intermediate/Amido.jpg"
+                                                            alt="">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>INSOLUBLES</strong></td>
+                                                    <td>0.2 %</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>SOLUBILITY</strong></td>
+                                                    <td>SOLUBLE IN WATER</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PURITY</strong></td>
+                                                    <td>80 %</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="product_table product_table_60" vspace="0" hspace="0"
+                                            ng-if="data.category_id == 'sulpho-c-acid'">
+                                            <tbody>
+                                                <tr class="belss">
+                                                    <td class="font-18 bless  border-radius-top-left border-radius-top-right"
+                                                        width="100%" align="CENTER" colspan="2" bgcolor="#FFF6F1">
+                                                        <strong>Specification</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PRODUCT NAME</strong></td>
+                                                    <td>SULPHO C ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CHEMICAL NAME</strong></td>
+                                                    <td>2-NAPHTHYLAMINE,4,6,8-TRI SULPHONIC ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>EMPIRICAL FORMULA</strong></td>
+                                                    <td>C10H10NO9S2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>STRUCTURAL FORMULA</strong></td>
+                                                    <td><img class="w25"
+                                                            src="assets/images/dyes_intermediate/Sulpho.jpg" alt="">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>&nbsp;INSOLUBLE</strong></td>
+                                                    <td>0.25 % MAX.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>&nbsp;PURITY</strong></td>
+                                                    <td>55 % MIN. SEMI. DRY</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>UNREACTED C ACID</strong></td>
+                                                    <td> 0.25 %</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="product_table product_table_60" vspace="0" hspace="0"
+                                            ng-if="data.category_id == 'k-acid'">
+                                            <tbody>
+                                                <tr class="bless">
+                                                    <td class="font-18 bless  border-radius-top-left border-radius-top-right"
+                                                        width="100%" align="CENTER" colspan="2" bgcolor="#FFF6F1">
+                                                        <strong>Specification</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PRODUCT NAME</strong></td>
+                                                    <td> K ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CHEMICAL NAME</strong></td>
+                                                    <td>2-NAPHTHYLAMINE-3,6,8-TRISULFONIC ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>MOLECULAR WEIGHT</strong></td>
+                                                    <td>383</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PHYSICAL APPEARANCE</strong></td>
+                                                    <td>YELLOWWISH WHITE COLOUR MOIST MATERIAL</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>SOLUBILITY</strong></td>
+                                                    <td>SOLUBLE IN HOT WATER</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CAS NO.</strong></td>
+                                                    <td>118-03-6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>STRUCTURAL FORMULA</strong></td>
+                                                    <td><img class="w25" src="assets/images/dyes_intermediate/pro4.jpg"
+                                                            alt=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>IMPERIAL FORMULA</strong></td>
+                                                    <td>C10-H9-N-09-S3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>EINECS NO.</strong></td>
+                                                    <td>204-229-9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PURITY BY N.V.</strong></td>
+                                                    <td>65 % MINI.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>2-NAPHTHYLAMINE-6,<br> 8-DISULFONIC ACID</strong></td>
+                                                    <td>0.3 % MAX.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>SULFURIC ACID,</strong></td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>2-NAPHTHYLAMINE</strong></td>
+                                                    <td>0.4 % MAX.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>FE</strong></td>
+                                                    <td>300 PPM MAX.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="product_table product_table_60" vspace="0" hspace="0"
+                                            ng-if="data.category_id == 'Schaffer-acid'">
+                                            <tbody>
+                                                <tr class="bless">
+                                                    <td class="font-18 bless  border-radius-top-left border-radius-top-right"
+                                                        width="100%" align="CENTER" colspan="2" bgcolor="#FFF6F1">
+                                                        <strong>Specification</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PRODUCT NAME</strong></td>
+                                                    <td>SCHAEFFER'S ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CHEMICAL NAME</strong></td>
+                                                    <td>2-NAPHTHOL 6-SULFONIC ACID&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>EMPIRICAL FORMULA</strong></td>
+                                                    <td>C13H2O4S</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>STRUCTURAL FORMULA</strong></td>
+                                                    <td><img class="w25" src="assets/images/dyes_intermediate/pro5.jpg"
+                                                            alt=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CAS NO.</strong></td>
+                                                    <td> 93-01-6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>MOLECULAR WEIGHT</strong></td>
+                                                    <td>224&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>ASSAY WET</strong></td>
+                                                    <td>65 % MIN.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PHYSICAL APPEARANCE</strong></td>
+                                                    <td>OFF WHITE TO BROWN COLOUR</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="product_table product_table_60" vspace="0" hspace="0"
+                                            ng-if="data.category_id == 'gamma-acid'">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="font-18 bless  border-radius-top-left border-radius-top-right"
+                                                        width="100%" align="CENTER" colspan="2" bgcolor="#FFF6F1">
+                                                        <strong>Specification</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PRODUCT NAME</strong></td>
+                                                    <td>Gamma Acid</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CHEMICAL NAME</strong></td>
+                                                    <td>6-AMINO-4-HYDROXY-2NAPHTHALENE SULFONIC ACID&nbsp; <br>
+                                                        2-AMINO-6-SULFONIC ACID-8-NAPHTHOL</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CAS NO.</strong></td>
+                                                    <td>90-51-7</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>MOLECULAR WEIGHT </strong></td>
+                                                    <td>239 GRAMS/MOLE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>EMPIRICAL FORMULA </strong></td>
+                                                    <td>C<sub>10</sub> H<sub>9</sub> N O<sub>4</sub> S</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>STRUCTURAL FORMULA </strong></td>
+                                                    <td><img class="w25" src="assets/images/dyes_intermediate/pro10.jpg"
+                                                            alt="">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PURITY</strong></td>
+                                                    <td>MN. 90% BY CV</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>AMIDO G &nbsp;ACID CONTENT</strong></td>
+                                                    <td>MN. &nbsp;0.30%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>DIOXY G &nbsp;ACID CONTENT</strong></td>
+                                                    <td>MN. &nbsp;030%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>BROENNER’S ACID CONTENT</strong></td>
+                                                    <td>MN. &nbsp;1.00%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>INSOLUBLE MATTERS </strong></td>
+                                                    <td>MN. &nbsp;0.20%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>SOLUBILITY </strong></td>
+                                                    <td>SOLUBILITY IN DILUTE ALKALI</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PHYSICAL APPEARANCE </strong></td>
+                                                    <td>LIGHT GRAY DRY POWDER</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>BASIS&nbsp; OF SALES </strong></td>
+                                                    <td>ON 100% REAL BASIS</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PACKING</strong></td>
+                                                    <td>25/50KGS HDPE BAGS&nbsp; WITH DOUBLE PE LINERS INSIDE</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="product_table product_table_60" vspace="0" hspace="0"
+                                            ng-if="data.category_id == 'h-acid'">
+
+                                            <tbody>
+                                                <tr class="bless">
+                                                    <td class="font-18 bless  border-radius-top-left border-radius-top-right"
+                                                        width="100%" align="CENTER" colspan="2" bgcolor="#FFF6F1">
+                                                        <strong>Specification</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PRODUCT NAME</strong></td>
+                                                    <td>H ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CHEMICAL NAME</strong></td>
+                                                    <td>1 AMINO-8 NAPHTHOL 3-6 DISULPHONIC ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CAS NO.</strong></td>
+                                                    <td>9-3-5460</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>EMPIRICAL FORMULA</strong></td>
+                                                    <td>C10H9O7NS2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>MOLECULAR WEIGHT</strong></td>
+                                                    <td>319</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>STRUCTURAL FORMULA</strong></td>
+                                                    <td><img class="w25" src="assets/images/dyes_intermediate/pro6.jpg">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PHYSICAL APPEARANCE</strong></td>
+                                                    <td>GREYISH WHITE&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>INSOLUNLE</strong></td>
+                                                    <td>0.2 % MAX.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="product_table product_table_60" vspace="0" hspace="0"
+                                            ng-if="data.category_id == 'g-salt'">
+
+                                            <tbody>
+                                                <tr class="bless">
+                                                    <td class="font-18 bless  border-radius-top-left border-radius-top-right"
+                                                        width="100%" align="CENTER" colspan="2" bgcolor="#FFF6F1">
+                                                        <strong>Specification</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PRODUCT NAME</strong></td>
+                                                    <td>G SALT&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CHEMICAL NAME</strong></td>
+                                                    <td>2-NAPHTHOL 6-8-DISULFONIC ACID&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>EMPIRICAL FORMULA</strong></td>
+                                                    <td>C14H8O7N2O2S</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>STRUCTURAL FORMULA</strong></td>
+                                                    <td><img class="w25" src="assets/images/dyes_intermediate/pro7.jpg"
+                                                            alt=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CAS NO.</strong></td>
+                                                    <td>118-32-1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>EINECS NO.</strong></td>
+                                                    <td>204-254-6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>MOLECULAR WEIGHT</strong></td>
+                                                    <td>304</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>ASSAY WET</strong></td>
+                                                    <td>65 % MIN.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PHYSICAL APPEARANCE</strong></td>
+                                                    <td>WHITE TO OFF WHITE POWDER</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="product_table product_table_60" vspace="0" hspace="0"
+                                            ng-if="data.category_id == 'sulpho-gamma-acid'">
+
+                                            <tbody>
+                                                <tr class="bless">
+                                                    <td class="font-18 bless  border-radius-top-left border-radius-top-right"
+                                                        width="100%" align="CENTER" colspan="2" bgcolor="#FFF6F1">
+                                                        <strong>Specification</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PRODUCT NAME</strong></td>
+                                                    <td>SULPHO GAMMA ACID&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CHEMICAL NAME</strong></td>
+                                                    <td>1-NAPHTHOL-3,6-DISULFONIC ACID&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>STRUCTURAL FORMULA</strong></td>
+                                                    <td><img class="w25" src="assets/images/dyes_intermediate/pro8.jpg"
+                                                            alt=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>EMPIRICAL FORMULA</strong></td>
+                                                    <td>C10H9NO7S2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CAS NO.</strong></td>
+                                                    <td>90-40-4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>MOLECULAR WEIGHT</strong></td>
+                                                    <td>319.31096</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="product_table product_table_60" vspace="0" hspace="0"
+                                            ng-if="data.category_id == 'sulpho-j-acid'">
+
+                                            <tbody>
+                                                <tr class="bless">
+                                                    <td class="font-18 bless  border-radius-top-left border-radius-top-right"
+                                                        width="100%" align="CENTER" colspan="2" bgcolor="#FFF6F1">
+                                                        <strong>Specification</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PRODUCT NAME</strong></td>
+                                                    <td>SULPHO J ACID&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>CHEMICAL NAME</strong></td>
+                                                    <td>2-AMINO-5-NAPHTHOL-1,7-DISULFONIC ACID&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>MOLECULAR WEIGHT</strong></td>
+                                                    <td>319</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>STRUCTURAL FORMULA</strong></td>
+                                                    <td><img class="w25" src="assets/images/dyes_intermediate/pro9.jpg"
+                                                            alt=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>PURITY</strong></td>
+                                                    <td>70 % &amp; ABOVE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>ISOMER</strong></td>
+                                                    <td>MAX. 3 % UNREACTED J ACID</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>INSOLUBLE</strong></td>
+                                                    <td>MAX. 0.5 %</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>H.P.L.C.</strong></td>
+                                                    <td>98 % &amp; ABOVE H.P.L.C. BY AREA</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <!-- Dyes Intermediate End -->
+
+                                    </div>
+
+                                </div>
+
+                                <div class="usesGrid">
+                                    <ul class="two-col-grid">
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Use in Toothpaste</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Liquid Soap</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Bath Soap</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>After Shave</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Toilet Cleaner</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Liquid Dish Washer</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Capsules</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Syrups</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Deodorants</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Shampoos</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Hair Oil</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Skin Creams</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Glass Cleaner</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Detergents</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Tablet Coatings</p>
+                                        </li>   
+                                        <li class="flex-row alc ">
+                                            <img src="https://dummyimage.com/50x50/c1c1c1/c1c1c1" alt="">
+                                            <p>Other personal care and home care products</p>
+                                        </li>   
+                                    </ul>
+                                </div>
+                        
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        
+
+        <div class=""></div>
+    </div>
+</div>

@@ -12,7 +12,7 @@
                                 0{{$index + 1}}
                             </p>
                         </div>
-                        <div class="down-arrow">
+                        <div class="down-arrow" ng-click="scrollToDiv('parshwadyes-home-section-two')">
                             <img src="assets/images/icons/down-arrow.svg" alt="">
                         </div>
                     </div>
@@ -22,7 +22,7 @@
 
             <div class="banner-text inner-flex small-gap alc text-center">
                 <div class="banner-title ">
-                    <h1 class="white-color">Pigment Paste & Emulsions</h1>
+                    <h1 class="white-color  bold-fonts">Pigment Paste & Emulsions</h1>
                 </div>
                 <div class="section-subtitle">
                     <h3 class="white-color">Our high quality pigment paste & emulsions are manufactured <br
@@ -42,8 +42,8 @@
                             <h4 class="gray-color">About</h4>
                         </div>
 
-                        <div class="section-title">
-                            <h2>The company with a
+                        <div class="section-title ">
+                            <h2 class="medium-fonts">The company with a
                                 good attitude</h2>
                         </div>
 
@@ -112,7 +112,7 @@
                             </div>
 
                             <div class="section-title">
-                                <h2>Parshwanath <br>
+                                <h2 class="medium-gap medium-fonts">Parshwanath <br>
                                     dyestuff industries</h2>
                             </div>
                         </div>
@@ -130,8 +130,8 @@
                         <div class="inner-flex  ">
                             &nbsp;
                         </div>
-                        <div class="about-btn wfc">
-                            <a href="dye-list">
+                        <div class="about-btn wfc"> 
+                            <a href="dyes">
                                 <button class="gradient-btn  common-link-btn">
                                     View All
                                     <img src="assets/images/icons/rounded-diagonal-arrow.svg" class="btn-icon" alt="">
@@ -145,10 +145,10 @@
             <div class="main-container-fluid section-padding pb0 relative">
                 <div class="dyeSwiper">
                     <ks-swiper-container override-parameters="dyeSwiper">
-                        <ks-swiper-slide ng-repeat="data in dyeList">
-                            <a href="dye/{{data.slug}}">
-                                <div class="dyeCard">
-                                    <div class="dyeImg">
+                        <ks-swiper-slide ng-repeat="data in productList">
+                            <a href="dyes/{{data.slug}}">
+                                <div class="dyeCard inner-flex">
+                                <div class="dyeImg">
                                         <img src="{{data.img}}" alt="">
                                     </div>
                                     <div class="dyeText section-content flex-row alc">
@@ -182,11 +182,11 @@
 
         <section class="parshwadyes-home-section-four relative" id="parshwadyes-home-section-four">
             <div class="main-container home-sect4-text">
-                <div class=" inner-flex big-gap alc text-center">
-                    <div class="inner-flex medium-gap">
+                <div class=" inner-flex medium-gap alc text-center">
+                    <div class="inner-flex small-gap">
 
-                        <div class="banner-title ">
-                            <h1 class="white-color">Research & Development</h1>
+                        <div class="section-title ">
+                            <h1 class="white-color medium-fonts">Research & Development</h1>
                         </div>
                         <div class="section-subtitle">
                             <h3 class="white-color">R&D prqgrams are designed to <br class="hidden-xs">

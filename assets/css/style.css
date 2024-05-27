@@ -143,9 +143,11 @@
     --gray-color: #838383;
     --secondary-color: #cc3c21;
     --white-color: #fff;
+    --brown-color: #a07d69;
     /* font-sizes */
     --banner-font-size: 6.25rem;
     --title-font-size: 5rem;
+    --title-font-size-2: 3rem;
     --subtitle-font-size: 2.25rem;
     --content-font-size: 1.3rem;
     --paragraph-font-size: 1.5rem;
@@ -163,7 +165,7 @@
     --common-gap-size: 1rem;
     --small-gap-size: 1.5rem;
     --medium-gap-size: 3rem;
-    --big-gap-size: 6rem;
+    --big-gap-size: 5rem;
 }
 
 html,
@@ -379,6 +381,14 @@ img {
     padding: 3rem 0;
 }
 
+.product-discription-padding {
+    padding: 3rem;
+}
+
+.brown-color {
+    color: var(--brown-color) !important;
+}
+
 .pt0 {
     padding-top: 0 !important;
 }
@@ -526,7 +536,7 @@ button {
     padding: 0 1.25rem;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
     letter-spacing: 1px;
 }
 
@@ -575,6 +585,11 @@ button.common-link-btn {
     line-height: 1.2;
 }
 
+.section-second-title h2 {
+    font-size: var(--title-font-size-2);
+    line-height: 1.2;
+}
+
 .banner-title h1,
 .banner-title h2 {
     font-size: var(--banner-font-size)
@@ -583,6 +598,8 @@ button.common-link-btn {
 .section-smalltitle h4 {
     font-size: var(--smalltitle-font-size)
 }
+
+
 
 
 .header-flex {
@@ -612,14 +629,16 @@ button.common-link-btn {
 .header-btn button {
     /* letter-spacing: 2px; */
 }
-
+.header-navigation-links ul li:hover a{
+    color: var(--secondary-color) !important;
+}
 .header-navigation-links ul li {
     padding: 2rem 0;
 }
 
 .banner-text {
     position: absolute;
-    bottom: 25%;
+    bottom: 22%;
     left: 50%;
     transform: translateX(-50%);
     width: 95%;
@@ -627,7 +646,7 @@ button.common-link-btn {
 }
 
 .parshwadyes-home-section-one {
-    height: 100svh;
+    /* height: 100svh; */
 }
 
 .home-banner-pagination {
@@ -640,11 +659,10 @@ button.common-link-btn {
 
 .banner-pagination-container {
     position: absolute;
-    bottom: 5%;
+    bottom: 8%;
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
-
 }
 
 .home-title .dot {
@@ -684,15 +702,14 @@ button.common-link-btn {
     width: 100%;
 }
 
-.dyeCard .dyeImg {
+.dyeCard .dyeImg img {
     border-radius: 1rem;
 
     transition: var(--common-transition);
-    overflow: hidden;
 }
 
-.dyeCard:hover .dyeImg {
-    border-radius: 2rem;
+.dyeCard:hover .dyeImg img {
+    border-radius: 3rem;
     transition: var(--common-transition);
 }
 
@@ -714,6 +731,7 @@ button.common-link-btn {
 
 .dyeCard:hover P {
     color: var(--secondary-color);
+    font-family: var(--medium-font-family);
 }
 
 .homne-sect3 {
@@ -839,7 +857,11 @@ button.common-link-btn {
 
 .footer-logo,
 .header-logo {
-    width: 15rem;
+    /* width: 15rem; */
+}
+
+.header-logo {
+    width: 12rem;
 }
 
 /* Mobile Header  */
@@ -909,7 +931,7 @@ button.common-link-btn {
 /* jay */
 
 .about-img {
-    width: 60%;
+    width: 40%;
 }
 
 .detaildiscription .section-content p,
@@ -933,9 +955,83 @@ button.common-link-btn {
     height: 100%;
     width: 100%;
     left: 0%;
-    background-color:  var(--primary-color);
+    background-color: var(--primary-color);
 
 }
+
 .manu_Navigation a {
     font-size: var(--subtitle-font-size);
+}
+
+.header-wrapper.header_change .white-logo {
+    display: none;
+}
+
+.header-wrapper.header_change .black-logo {
+    display: block;
+}
+
+.menu.active .bar {
+    background-color: var(--white-color) !important;
+}
+
+.readmore_click {
+    padding-top: 2rem;
+    display: block;
+}
+
+.section-table-discription .readmore_click {
+    color: var(--brown-color);
+}
+
+.w25 {
+    width: 25%;
+}
+
+.usesGrid ul li img {
+    flex-basis: 5%;
+}
+
+.dyeImg,
+.dyeImg img {
+    aspect-ratio: 1;
+}
+
+.productListGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--medium-gap-size);
+}
+
+.hoverParent:hover .hover-disable,
+.hoverParent .hover-enable {
+    display: block
+}
+
+.hoverParent:hover .hover-enable,
+.hoverParent .hover-disable {
+    display: none
+}
+
+
+.product-arrow {
+    width: 1.5rem;
+}
+
+.border-radius {
+    border-radius: 1.5rem;
+    transition: var(--common-transition);
+}
+
+
+.hoverParent:hover .border-radius {
+    border-radius: 3rem;
+
+}
+.hoverParent p{
+    transition: var(--common-transition);
+}
+
+.hoverParent:hover p{
+    color : var(--secondary-color);
 }

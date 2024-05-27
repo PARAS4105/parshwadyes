@@ -3,7 +3,8 @@ app = angular.module("parshwadyes", ['ngRoute', /*'ngIdle',*/ 'base64', 'ngStora
 
 app.$inject = ['SweetAlert'];
 
-var base_url = 'http://192.168.1.31/parshwadyes/';
+// var base_url = 'http://192.168.1.31/parshwadyes/';
+var base_url = 'https://www.parshwadyes.com/beta/';
 
 app.config(['$locationProvider', '$routeProvider', '$validatorProvider', /*'AnalyticsProvider',*/ /*'socialProvider',*/
 	function ($locationProvider, $routeProvider, $validatorProvider /*AnalyticsProvider,*/ /*socialProvider*/) {
@@ -59,6 +60,12 @@ app.config(['$locationProvider', '$routeProvider', '$validatorProvider', /*'Anal
 			page_title: "",
 			blackHeader: true,
 		})
+		$routeProvider.when("/agent", {
+			templateUrl: "templates/contact.html?ver=12-01-2023-v1",
+			controller: "contactController",
+			page_title: "",
+			blackHeader: true,
+		})
 		$routeProvider.when("/about", {
 			templateUrl: "templates/about.html?ver=12-01-2023-v1",
 			controller: "aboutController",
@@ -66,8 +73,9 @@ app.config(['$locationProvider', '$routeProvider', '$validatorProvider', /*'Anal
 			page_title: "",
 
 		})
+		
 		$routeProvider.when("/dyes", {
-			templateUrl: "templates/list.html?ver=12-01-2023-v1",
+			templateUrl: "templates/products/list.html?ver=12-01-2023-v1",
 			controller: "listController",
 			page_title: "",
 			blackHeader: true,
@@ -85,6 +93,14 @@ app.config(['$locationProvider', '$routeProvider', '$validatorProvider', /*'Anal
 		// 	blackHeader: true,
 		// })
 
+		// $routeProvider.when("/dyes/test", {
+		// 	templateUrl: "templates/products/detail2.html?ver=12-01-2023-v1",
+		// 	controller: "detailController",
+		// 	page_title: "",
+		// 	blackHeader: true,
+
+		// })
+
 		$routeProvider.when("/dyes/:slug", {
 			templateUrl: "templates/products/detail.html?ver=12-01-2023-v1",
 			controller: "detailController",
@@ -92,6 +108,7 @@ app.config(['$locationProvider', '$routeProvider', '$validatorProvider', /*'Anal
 			blackHeader: true,
 
 		})
+		
 			.otherwise({
 				redirectTo: "/"
 			});
@@ -495,6 +512,13 @@ app.directive('starRating', function () {
 
 app.controller("MainController", function ($scope, $location, $rootScope, $timeout, $http, $localStorage, $routeParams, $window, $route, $base64, $timeout, $sce, $mdToast, $filter, $interval) {
 
+	$rootScope.scrollToDiv = function (div) {
+		$('html, body').animate({
+			scrollTop: Math.round($("#" + div).offset().top - 150)
+		}, 500);
+
+	}
+
 	$rootScope.isMobileScreen = false;
 
 	if ($window.innerWidth <= 991) {
@@ -597,6 +621,60 @@ app.controller("MainController", function ($scope, $location, $rootScope, $timeo
 		$scope.mobileMenuActive = false;
 	}
 
+	$scope.dyeList = [
+		{
+			img: "assets/images/homepage/1-product-homepage.jpg",
+			name: "Reactive Dyes",
+			slug: "reactive-dyes",
+		},
+		{
+			img: "assets/images/homepage/2-product-homepage.jpg",
+			name: "Food & Lake Colors",
+			slug: "food-colors",
+		},
+		{
+			img: "assets/images/homepage/3-product-homepage.jpg",
+			name: "Direct Dyes ",
+			slug: "direct-dyes",
+		},
+		{
+			img: "assets/images/homepage/4-product-homepage.jpg",
+			name: "Acid Dyes",
+			slug: "acid-dyes",
+
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Wood Stain Dyes",
+			slug: "wood-stain-dyes",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Pigment Powder",
+			slug: "pigment-powder",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Solvent Dyes",
+			slug: "solvent-dyes",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Pigment Paste & Emulsions",
+			slug: "pigment-paste-&-emulsions",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Titanium Dioxide",
+			slug: "titanium-dioxide",
+		},
+		{
+			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
+			name: "Dyes Intermediate",
+			slug: "dyes-intermediate",
+		},
+
+	]
 
 
 
@@ -631,72 +709,19 @@ app.controller("homeController", function ($scope, $location, $rootScope, $timeo
 		},
 		{
 			img: "assets/images/homepage/5-Wood-Stain-Dyes.jpg"
-		},		
+		},
 		{
 			img: "assets/images/homepage/7-Solvent-Dyes.jpg"
 		},
 
 	]
 
-	$scope.dyeList = [
-		{
-			img: "assets/images/homepage/1-product-homepage.jpg",
-			name: "Reactive Dyes",
-			slug: "reactive-dyes",
-		},
-		{
-			img: "assets/images/homepage/2-product-homepage.jpg",
-			name: "Food & Lake Colors",
-			slug: "food-&-Lake-colors",
-		},
-		{
-			img: "assets/images/homepage/3-product-homepage.jpg",
-			name: "Direct Dyes ",
-			slug: "direct-Dyes ",
-		},
-		{
-			img: "assets/images/homepage/4-product-homepage.jpg",
-			name: "Acid Dyes",
-			slug: "acid-Dyes",
 
-		},
-		{
-			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
-			name: "Wood Stain Dyes",
-			slug: "wood-stain-dyes",
-		},
-		{
-			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
-			name: "Pigment Powder",
-			slug: "pigment-powder",
-		},
-		{
-			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
-			name: "Solvent Dyes",
-			slug: "solvent-dyes",
-		},
-		{
-			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
-			name: "Pigment Paste & Emulsions",
-			slug: "pigment-paste-&-emulsions",
-		},
-		{
-			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
-			name: "Titanium Oxide",
-			slug: "titanium-oxide",
-		},
-		{
-			img: "https://www.dummyimage.com/300X300/c1c1c1/c1c1c1",
-			name: "Dyes Intermediate",
-			slug: "dyes-intermediate",
-		},
-
-	]
 
 	$scope.dyeSwiper = {
 		observer: true,
 		observerParent: true,
-		slidesPerView: 6,
+		slidesPerView: 5.25,
 		slidesOffsetBefore: 90,
 		slidesOffsetAfter: 90,
 		spaceBetween: 10,
@@ -1049,6 +1074,23 @@ app.controller("listController", function ($scope, $location, $rootScope, $timeo
 
 	console.log("List Controller");
 
+	$scope.homeBannerSwiper = {
+		observer: true,
+		observerParent: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		effect: "fade",
+		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: true,
+		},
+		pagination: {
+			el: ".swiper-pagination.home-banner-pagination",
+			type: "fraction",
+		},
+	}
+
 
 })
 app.controller("detailController", function ($scope, $location, $rootScope, $timeout, $http, $localStorage, $routeParams, $window, $route, $base64, $timeout, $sce, $mdToast, $filter, $interval) {
@@ -1058,94 +1100,53 @@ app.controller("detailController", function ($scope, $location, $rootScope, $tim
 	$scope.productSlug = $routeParams.slug;
 
 
+	// if($rootScope.activePath ==  '/dyes/test' ){
+	// 	$scope.productSlug = 'test';
+	// }
+
+
+	console.log($rootScope.activePath);
+	console.log($scope.productSlug);
+
 	$timeout(() => {
 
 		$rootScope.producttDetailObj = $rootScope.productList.find((product) => {
 
 			if ($scope.productSlug == product.slug) {
-
-				// return product;
-
-
-				angular.forEach(product.tableData, function (tableData) {
-					$http({
-						url: base_url + tableData.table,
-					}).then(function successCallback(responseIn) {
-						tableData.table = responseIn.data;
-
-					}, function errorCallback(responseIn) {
-						console.log("Oops.... ")
-					})
-				})
-
-				//  console.log($rootScope.productList, "PSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
-
 				return product;
-
 			}
-
 		});
+
+
 		console.log($rootScope.producttDetailObj);
+		$scope.tabObj = $rootScope.producttDetailObj.categoryArray[0].category;
 
 	}, 1000);
 
-	$scope.TabPanalData = [
-		{
-			id: "Reactive_Cold_Dyes",
-			catagory: "Reactive Cold Dyes",
-
-		},
-		{
-			id: "Reactive_HE_Dyes",
-			catagory: "Reactive HE Dyes",
-
-		},
-		{
-			catagory: "Reactive Hot Dyes",
-
-		},
-		{
-			catagory: "Reactive ME Dyes",
-
-		},
-		{
-			catagory: "Reactive Vinyl Sulphone",
-
-		},
-		// {
-		// 	catagory: "Base Dyes",
-
-		// },
-		{
-			catagory: "Reactive Printing Dyes",
-
-		},
-	]
-	$scope.tabObj = $scope.TabPanalData[0];
-	$scope.tabClick = function (data) {
-		$scope.tabObj = data;
-	};
 
 
-	$scope.scrollToDiv = function (div) {
-		$('html, body').animate({
-			scrollTop: Math.round($("#" + div).offset().top - 150)
-		}, 500);
+	$timeout(() => {
 
-	}
+		$scope.tabClick = function (data) {
+			$scope.tabObj = data;
+		};
+
+	}, 1000)
+
+	
 
 
 	$scope.HomeBannerdata = [
 		{
-			title : "Reactive Dyes Manufracturer",
+			title: "Reactive Dyes Manufracturer",
 			img: "assets/images/homepage/homepage-banner.jpg"
 		},
-		{	
-			title : "Reactive Dyes Manufracturer",
-			img: "assets/images/homepage/5-Wood-Stain-Dyes.jpg"
-		},		
 		{
-			title : "Reactive Dyes Manufracturer",
+			title: "Reactive Dyes Manufracturer",
+			img: "assets/images/homepage/5-Wood-Stain-Dyes.jpg"
+		},
+		{
+			title: "Reactive Dyes Manufracturer",
 			img: "assets/images/homepage/7-Solvent-Dyes.jpg"
 		},
 	]
