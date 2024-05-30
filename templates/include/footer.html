@@ -31,27 +31,27 @@
                         <div class="footer-links link-fonts">
                             <ul class="inner-flex">
                                 <li>
-                                    <a href="{{base_url}}" ng-class="{'active'  : activePath = '/' }">
+                                    <a href="{{base_url}}" ng-class="{'active'  : activePath == '/' }">
                                         Home
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/about" ng-class="{'active'  : activePath = '/about' }">
+                                    <a href="about" ng-class="{'active'  : activePath == '/about' }">
                                         About Us
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/quality" ng-class="{'active'  : activePath = '/quality' }">
+                                    <a href="quality" ng-class="{'active'  : activePath == '/quality' }">
                                         Quality
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/contact" ng-class="{'active'  : activePath = '/contact' }">
+                                    <a href="contact" ng-class="{'active'  : activePath == '/contact' }">
                                         Agent or Seller
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/contact" ng-class="{'active'  : activePath = '/contact' }">
+                                    <a href="contact" ng-class="{'active'  : activePath == '/contact' }">
                                         Contact Us
                                     </a>
                                 </li>
@@ -69,7 +69,7 @@
                         <div class="footer-links link-fonts">
                             <ul class="inner-flex">
                                 <li ng-repeat="data in dyeList">
-                                    <a href="dyes/{{data.slug}}" ng-class="{'active'  : activePath = '/dyes' }">
+                                    <a href="dyes/{{data.slug}}" ng-class="{'active'  : activePath == '/dyes' }">
                                         {{data.name}}
                                     </a>
                                 </li>
@@ -106,14 +106,14 @@
                         <div class="footer-links link-fonts">
                             <ul class="inner-flex">
                                 <li>
-                                    <a href="/" ng-class="{'active'  : activePath = '/' }">
+                                    <a href="https://maps.app.goo.gl/2gXy9cpSraZiiXfW9" target="_blank">
                                         1-5617, Phase-ll, Vat-va, G.I.D.C.
                                         Ahmedabad -382 445,
                                         Gujarat (India)
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="tel:+917940083231" ">
+                                    <a href="tel:+917940083231">
                                         +91-794-008-3231
                                     </a>
                                 </li>
@@ -159,10 +159,10 @@
             <div class="flex-row medium-gap alc" ng-class="{'j-c-c' : isMobileScreen , 'inner-flex' :  isMobileScreen}">
                 <div class="footer-logo">
                     <a href="{{base_url}}">
-                        <img src="assets/images/logo/logo.png" alt="">
+                        <img src="assets/images/logo/logo.png" alt="" class="footer_logo">
                     </a>
                 </div>
-                <div class="link-fonts " ng-if="!isMobileScreen">
+                <div class="link-fonts" ng-if="!isMobileScreen">
                     <p>
                         &copy; Parshwanath Group of Industries 2024
                     </p>
@@ -190,7 +190,7 @@
                     
                 </div>
                 <div class="link-fonts">
-                    <p>Design By : <a href="https://www.saltpixels.in" class="salt-logo"> </a></p>
+                    <p>Design By : <a href="https://www.saltpixels.in" target="_blank" class="salt-logo"> </a></p>
                 </div>
             </div>
         </div>

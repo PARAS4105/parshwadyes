@@ -6,7 +6,29 @@
                     <div class="banner-img h100">
                         <img src="{{data.img}}" class="h100" alt="">
                     </div>
-                    <div class="banner-pagination-container inner-flex alc">
+                    <div class="banner-pagination-container inner-flex  alc">
+                        <div class="home-banner-pagination link-fonts">
+                            <div class="circle">
+                                <div class="mask full">
+                                    <div class="fill"></div>
+                                </div>
+                                <div class="mask half">
+                                    <div class="fill"></div>
+                                </div>
+                                <div class="inside-circle link-fonts " >
+                                    <p class="white-color"><span class="white-color" ng-if="$index < 9">0</span>{{$index + 1}}</p>
+                                   
+                                </div>
+                                <!-- <div class="inside-circle white-color" ng-if="$index > 9">
+                                    {{$index + 1}}
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="down-arrow" ng-click="scrollToDiv('parshwadyes-home-section-two')">
+                            <img src="assets/images/icons/down-arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- <div class="banner-pagination-container inner-flex alc">
                         <div class="home-banner-pagination link-fonts" ng-if="$index <= 9">
                             <p class="white-color">
                                 0{{$index + 1}}
@@ -20,7 +42,7 @@
                         <div class="down-arrow" ng-click="scrollToDiv('parshwadyes-home-section-two')">
                             <img src="assets/images/icons/down-arrow.svg" alt="">
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="banner-text inner-flex small-gap alc text-center">
                         <div class="banner-title ">

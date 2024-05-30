@@ -3,8 +3,8 @@ app = angular.module("parshwadyes", ['ngRoute', /*'ngIdle',*/ 'base64', 'ngStora
 
 app.$inject = ['SweetAlert'];
 
-// var base_url = 'http://192.168.1.31/parshwadyes/';
-var base_url = 'https://www.parshwadyes.com/beta/';
+var base_url = 'http://192.168.1.31/parshwadyes/';
+// var base_url = 'https://www.parshwadyes.com/beta/';
 
 app.config(['$locationProvider', '$routeProvider', '$validatorProvider', /*'AnalyticsProvider',*/ /*'socialProvider',*/
 	function ($locationProvider, $routeProvider, $validatorProvider /*AnalyticsProvider,*/ /*socialProvider*/) {
@@ -695,7 +695,7 @@ app.controller("homeController", function ($scope, $location, $rootScope, $timeo
 		loop: true,
 		autoplay: {
 			delay: 5000,
-			disableOnInteraction: true,
+			disableOnInteraction: false,
 		},
 		pagination: {
 			el: ".swiper-pagination.home-banner-pagination",
@@ -758,7 +758,7 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 
 			catagory: "Reactive Dyes",
 			imgs: "assets/images/contact/contact-product-1.jpg",
-			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contentData: "<div> <p> <a href=\"https://maps.app.goo.gl/BD3533q43vgtncRAA\" target=\"_blank\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Jitendra Rakholiya",
@@ -777,7 +777,7 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 			catagory: "Food & Lake Colors",
 			imgs: "assets/images/contact/contact-product-2.jpg",
 
-			contentData: "<div> <p> <a href=\"\">Plot No. 452/453, Phase-II, G.I.D.C, Vatva, Ahmedabad - 382445 (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940085400\"> +(91)-(79)-40085400 </a> / <a href=\"tel:+917940085400\"> 01 </a> / <a href=\"tel:+917940085400\"> 02 </a> </p> </div>",
+			contentData: "<div> <p> <a href=\"https://maps.app.goo.gl/BD3533q43vgtncRAA\" target=\"_blank\">Plot No. 452/453, Phase-II, G.I.D.C, Vatva, Ahmedabad - 382445 (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940085400\"> +(91)-(79)-40085400 </a> / <a href=\"tel:+917940085400\"> 01 </a> / <a href=\"tel:+917940085400\"> 02 </a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Arun Agarwal (Domestic Market)",
@@ -794,7 +794,7 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		{
 			catagory: "Direct Dye",
 			imgs: "assets/images/contact/contact-product-3.jpg",
-			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contentData: "<div> <p> <a href=\"https://maps.app.goo.gl/BD3533q43vgtncRAA\" target=\"_blank\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Jitendra Rakholiya",
@@ -811,7 +811,7 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		{
 			catagory: "Acid Dyes Manufacturer ",
 			imgs: "assets/images/contact/contact-product-4-2.jpg",
-			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contentData: "<div> <p> <a href=\"https://maps.app.goo.gl/BD3533q43vgtncRAA\" target=\"_blank\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Jitendra Rakholiya",
@@ -829,7 +829,7 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 			catagory: "Wood Stain Dyes",
 			imgs: "assets/images/contact/contact-product-5.jpg",
 
-			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contentData: "<div> <p> <a href=\"https://maps.app.goo.gl/BD3533q43vgtncRAA\" target=\"_blank\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Jitendra Rakholiya",
@@ -847,7 +847,7 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 			catagory: "Pigment Powder Manufacturer",
 			imgs: "assets/images/contact/contact-product-6.jpg",
 
-			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contentData: "<div> <p> <a href=\"https://maps.app.goo.gl/BD3533q43vgtncRAA\" target=\"_blank\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Jitendra Rakholiya",
@@ -865,7 +865,7 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 			catagory: "Pigment",
 			imgs: "assets/images/contact/contact-product-7.jpg",
 
-			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contentData: "<div> <p> <a href=\"https://maps.app.goo.gl/BD3533q43vgtncRAA\" target=\"_blank\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Jitendra Rakholiya",
@@ -883,7 +883,7 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 			catagory: "Powder Solvent",
 			imgs: "assets/images/contact/contact-product-1.jpg",
 
-			contentData: "<div> <p> <a href=\"\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
+			contentData: "<div> <p> <a href=\"https://maps.app.goo.gl/BD3533q43vgtncRAA\" target=\"_blank\">I-5617, Phase-II, Vatva, G.I.D.C. Ahmedabad -382 445, Gujarat (India)</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40083231 </a> / <a href=\"tel:+917940083230\"> 40083230 </a> / <a href=\"tel:+917940085400\"> 40085400 </a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Jitendra Rakholiya",
@@ -899,9 +899,9 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		},
 		{
 			catagory: "Titanium Dioxide",
-			imgs: "assets/images/contact/contact-product-1.jpg",
+			imgs: "assets/images/contact/contact-product-2.jpg",
 
-			contentData: "<div> <p> <a href=\"\">Plot No. 443, G.I.D.C. Estate, Phase - 2, Vatva, Ahmedabad - 382 445 Gujarat, (INDIA).</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40084607 </a> / <a href=\"tel:+919979874747\"> +(91)-(99)-79874747</a> </a> </p> </div> <div><p><a href=\"mailto:info@shubhlaxmiindustries.in\">info@shubhlaxmiindustries.in</a> </p> </div>",
+			contentData: "<div> <p> <a href=\"https://maps.app.goo.gl/BD3533q43vgtncRAA\" target=\"_blank\">Plot No. 443, G.I.D.C. Estate, Phase - 2, Vatva, Ahmedabad - 382 445 Gujarat, (INDIA).</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40084607 </a> / <a href=\"tel:+919979874747\"> +(91)-(99)-79874747</a> </a> </p> </div> <div><p><a href=\"mailto:info@shubhlaxmiindustries.in\">info@shubhlaxmiindustries.in</a> </p> </div>",
 			contactPerson: [
 				{
 					name: "Mr. Jitendra Rakholiya",
@@ -922,9 +922,9 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 		},
 		{
 			catagory: "Dyes Pigment Paste",
-			imgs: "assets/images/contact/contact-product-1.jpg",
+			imgs: "assets/images/contact/contact-product-3.jpg",
 
-			contentData: "<div> <p> <a href=\"\">Plot No. 443, G.I.D.C. Estate, Phase - 2, Vatva, Ahmedabad - 382 445 Gujarat, (INDIA).</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40084607 </a> / <a href=\"tel:+919979874747\"> +(91)-(99)-79874747</a> </a> </p> </div> <div><p><a href=\"mailto:info@shubhlaxmiindustries.in\">info@shubhlaxmiindustries.in</a> </p> </div>",
+			contentData: "<div> <p> <a href=\"https://maps.app.goo.gl/BD3533q43vgtncRAA\" target=\"_blank\">Plot No. 443, G.I.D.C. Estate, Phase - 2, Vatva, Ahmedabad - 382 445 Gujarat, (INDIA).</a> </p> </div> <div> <p> <a href=\"tel:+917940083231\"> +(91)-(79)-40084607 </a> / <a href=\"tel:+919979874747\"> +(91)-(99)-79874747</a> </a> </p> </div> <div><p><a href=\"mailto:info@shubhlaxmiindustries.in\">info@shubhlaxmiindustries.in</a> </p> </div>",
 
 		},
 
@@ -949,7 +949,10 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 				email: true,
 			},
 			contact: {
-				required: true
+				required: true,
+			},
+			message: {
+				required: true,
 			},
 
 
@@ -965,6 +968,9 @@ app.controller("contactController", function ($scope, $location, $rootScope, $ti
 			},
 			contact: {
 				required: "Please enter mobile number."
+			},
+			message: {
+				required: "Please enter your message."
 			},
 
 
@@ -1083,7 +1089,7 @@ app.controller("listController", function ($scope, $location, $rootScope, $timeo
 		loop: true,
 		autoplay: {
 			delay: 5000,
-			disableOnInteraction: true,
+			disableOnInteraction: false,
 		},
 		pagination: {
 			el: ".swiper-pagination.home-banner-pagination",

@@ -41,7 +41,7 @@
                                 <div class="loction_icon">
                                     <img src="assets/images/contact/location-icon.svg" alt="">
                                 </div>
-                                <div class="inner-flex" ng-bind-html="tabObj.contentData"></div>
+                                <div class="inner-flex contact_tel" ng-bind-html="tabObj.contentData"></div>
 
                             </div>
 
@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="flex-row big-gap sec2preson">
 
-                                    <div class="inner-flex section-content" ng-repeat="subData in tabObj.contactPerson">
+                                    <div class="inner-flex section-content contact_tel" ng-repeat="subData in tabObj.contactPerson">
 
                                         <p class="semibold-fonts">{{subData.name}}</p>
                                         <p ng-bind-html="subData.phone">

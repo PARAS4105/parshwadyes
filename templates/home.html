@@ -6,11 +6,19 @@
                     <div class="banner-img h100">
                         <img src="{{data.img}}" class="h100" alt="">
                     </div>
-                    <div class="banner-pagination-container inner-flex alc">
-                        <div class="home-banner-pagination link-fonts" ng-if="$index < 10">
-                            <p class="white-color">
-                                0{{$index + 1}}
-                            </p>
+                    <div class="banner-pagination-container inner-flex  alc">
+                        <div class="home-banner-pagination link-fonts">
+                            <div class="circle">
+                                <div class="mask full">
+                                    <div class="fill"></div>
+                                </div>
+                                <div class="mask half">
+                                    <div class="fill"></div>
+                                </div>
+                                <div class="inside-circle link-fonts " >
+                                    <p class="white-color"><span class="white-color" ng-if="$index < 9">0</span>{{$index + 1}}</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="down-arrow" ng-click="scrollToDiv('parshwadyes-home-section-two')">
                             <img src="assets/images/icons/down-arrow.svg" alt="">
@@ -55,13 +63,13 @@
                     </div>
                     <div class="inner-flex big-gap mlauto w50">
 
-                        <div class="flex-row medium-gap j-c-sb">
+                        <div class="homesec2_icon flex-row medium-gap  j-c-sb">
                             <div class="inner-flex alc " ng-class="{'text-center' : isMobileScreen}">
                                 <div class="about-img">
                                     <img src="assets/images/homepage/HOMEPAGE-ABOUT-01.svg" alt="">
                                 </div>
                                 <div class="about-text section-content">
-                                    <p class="secondary-color uppercase"> QUALITY PRODUCTS </p>
+                                    <p class="secondary-color text-center uppercase"> QUALITY PRODUCTS </p>
                                 </div>
                             </div>
                             <div class="inner-flex alc" ng-class="{'text-center' : isMobileScreen}">
@@ -69,7 +77,7 @@
                                     <img src="assets/images/homepage/HOMEPAGE-ABOUT-02.svg" alt="">
                                 </div>
                                 <div class="about-text section-content">
-                                    <p class="secondary-color uppercase"> YEARS EXPERIENCE </p>
+                                    <p class="secondary-color text-center uppercase"> YEARS EXPERIENCE </p>
                                 </div>
                             </div>
                             <div class="inner-flex alc" ng-class="{'text-center' : isMobileScreen}">
@@ -77,7 +85,7 @@
                                     <img src="assets/images/homepage/HOMEPAGE-ABOUT-03.svg" alt="">
                                 </div>
                                 <div class="about-text section-content">
-                                    <p class="secondary-color uppercase"> 05 PRODUCTION UNITS </p>
+                                    <p class="secondary-color text-center uppercase"> 05 PRODUCTION UNITS </p>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +138,7 @@
                         <div class="inner-flex  ">
                             &nbsp;
                         </div>
-                        <div class="about-btn wfc"> 
+                        <div class="about-btn wfc">
                             <a href="dyes">
                                 <button class="gradient-btn  common-link-btn">
                                     View All
@@ -148,7 +156,7 @@
                         <ks-swiper-slide ng-repeat="data in productList">
                             <a href="dyes/{{data.slug}}">
                                 <div class="dyeCard inner-flex">
-                                <div class="dyeImg">
+                                    <div class="dyeImg">
                                         <img src="{{data.img}}" alt="">
                                     </div>
                                     <div class="dyeText section-content flex-row alc">
@@ -209,4 +217,3 @@
 
     </div>
 </div>
-

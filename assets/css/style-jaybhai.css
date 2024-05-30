@@ -537,7 +537,6 @@
     .sec4_img {
         width: 60%;
         padding: 0;
-        margin: 0 auto;
     }
 
     .sec2_bordar {
@@ -644,6 +643,20 @@
         border-bottom-left-radius: 1rem;
     }
 
+    .markerList li{
+        position: relative;
+        padding-left: 20px;
+    }
+    .markerList li::before {
+        position: absolute;
+        content: "";
+        top: 10px;
+        left: 0;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #000;
+    }
 
 
     .font-16 {
@@ -721,7 +734,7 @@
     }
 
     .table_full_wraper::-webkit-scrollbar {
-        height: 3px;
+        height: 5px;
     }
 
     .table_full_wraper::-webkit-scrollbar-thumb {
@@ -779,7 +792,19 @@
         opacity: 1;
         display: block;
     }
+    .sec2heading p{
+        transition: var(--common-transition);
+    }
+    .sec2heading p:hover{
+        color: var(--secondary-color) !important;
+        transition: var(--common-transition);
 
+    }
+    .contact_tel a:hover{
+        color: var(--secondary-color) !important;
+        transition: var(--common-transition);
+    }
+   
 
     /* Responsive */
 
@@ -797,6 +822,11 @@
         .tableSec3text h3 {
             font-size: 2.3rem;
             width: 74%;
+        }
+        .markerList li::before {
+            top: 6px;
+            width: 5px;
+            height: 5px;
         }
     }
 
@@ -893,7 +923,10 @@
         }
 
         .table_grid {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: 100%;
+        }
+        .markerList li::before {
+            top: 7px;
         }
 
     }
@@ -902,7 +935,7 @@
         .sec2imgflex {
             padding: 1rem;
         }
-
+       
         .sec2_adrs {
             padding: 1rem;
         }
@@ -933,7 +966,7 @@
         }
 
         .about-sect4-bg {
-            height: 70svh;
+            height: 100svh;
         }
 
         .about-sect4-bg .home-sect4-text {
@@ -968,6 +1001,10 @@
         .product_sec2_tab {
             padding: 1.5rem 0.5rem;
 
+        }
+        .markerList li::before {
+            width: 5px;
+            height: 5px;
         }
 
     }

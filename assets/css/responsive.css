@@ -1,4 +1,16 @@
-@media only screen and (max-width: 1680px) {}
+@media only screen and (max-width: 1680px) {
+    .parshwadyes-home-section-one {
+        height: 100svh;
+    }
+
+    .banner-pagination-container {
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content !important;
+    }
+}
 
 @media only screen and (max-width: 1440px) {
     html {
@@ -58,6 +70,7 @@
     .footer-main-title h2 {
         font-size: 8rem;
     }
+
 }
 
 @media only screen and (max-width: 991px) {
@@ -91,29 +104,41 @@
         flex-direction: row;
 
     }
+
     .textimg {
         padding-right: 1rem;
     }
+
     .about_sec4_text {
         justify-content: end;
         padding: 3rem 0;
     }
+
     .header-wrapper {
         padding: 1.5rem 0;
     }
+
     .parshwadyes-home-section-one {
         height: 100svh;
     }
-    .productListGrid{
-        grid-template-columns: repeat( 2 , 1fr );
+
+    .productListGrid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media only screen and (max-width: 767px) {
+    .homesec2_icon {
+        gap: 1rem;
+    }
 
     .footer-inquiry-tab {
         flex-direction: column;
 
+    }
+
+    .banner-pagination-container {
+        bottom: 6%;
     }
 
     .footer-quick-link {
@@ -162,13 +187,23 @@
         margin: 1rem auto;
     }
 
- 
+
     .about_sec4_text {
         padding: 1rem 0;
     }
 
-    .productListGrid{
-        grid-template-columns: repeat( 1 , 1fr );
+    .productListGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .bannericon {
+
+        width: 6rem;
+        right: -10%;
+    }
+
+    .product-discription-padding {
+        padding: 3rem 1.5rem;
     }
 
 }

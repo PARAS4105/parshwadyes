@@ -137,6 +137,7 @@
 }
 
 
+
 :root {
     /* colors */
     --primary-color: #000;
@@ -629,9 +630,11 @@ button.common-link-btn {
 .header-btn button {
     /* letter-spacing: 2px; */
 }
-.header-navigation-links ul li:hover a{
+
+.header-navigation-links ul li:hover a {
     color: var(--secondary-color) !important;
 }
+
 .header-navigation-links ul li {
     padding: 2rem 0;
 }
@@ -649,20 +652,43 @@ button.common-link-btn {
     /* height: 100svh; */
 }
 
+/* .checkmark-loader {
+    animation: 600ms ease forwards loader-spin, 500ms linear 500ms forwards border-fill;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-left-color: red;
+    border-radius: 100%;
+
+    display: inline-block;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+} */
+.parshwadyes-list-wrapper .home-banner-pagination, .parshwadyes-home-wrapper .home-banner-pagination {
+    padding: 2rem;
+    border: 0px solid #FFFFFF38 !important;
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    background: transparent;
+}
+
 .home-banner-pagination {
     padding: 2rem;
     border: 1px solid #FFFFFF38;
     border-radius: 100%;
     width: 5rem;
     height: 5rem;
+    position: relative;
+    background: transparent;
 }
 
 .banner-pagination-container {
     position: absolute;
-    bottom: 8%;
+    bottom: 9%;
     left: 50%;
     transform: translateX(-50%);
-    width: fit-content;
+    width: fit-content !important;
 }
 
 .home-title .dot {
@@ -858,6 +884,8 @@ button.common-link-btn {
 .footer-logo,
 .header-logo {
     /* width: 15rem; */
+    width: 12rem;
+
 }
 
 .header-logo {
@@ -903,11 +931,19 @@ button.common-link-btn {
 .header-wrapper .white-logo {
     display: block;
 }
-
-.header-wrapper .black-logo {
-    display: none;
+.header-wrapper.active .white-logo {
+    display: block !important;
+}
+.header-wrapper.active .black-logo {
+    display: none !important;
 }
 
+.header-wrapper .black-logo {
+    display: none ;
+}
+.header-wrapper.header_change .black-logo .menu.active {
+
+}
 
 .header-wrapper.black-header .header-navigation-links a {
     color: var(--primary-color) !important;
@@ -971,6 +1007,10 @@ button.common-link-btn {
     display: block;
 }
 
+.header-wrapper.header_change .header-navigation-links li:hover a{
+    color: var(--secondary-color) !important;
+}
+
 .menu.active .bar {
     background-color: var(--white-color) !important;
 }
@@ -1028,10 +1068,98 @@ button.common-link-btn {
     border-radius: 3rem;
 
 }
-.hoverParent p{
+
+.hoverParent p {
     transition: var(--common-transition);
 }
 
-.hoverParent:hover p{
-    color : var(--secondary-color);
+.hoverParent:hover p {
+    color: var(--secondary-color);
+}
+
+.number {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+.parshwadyes-list-wrapper .home-banner-pagination .circle .mask, .parshwadyes-home-wrapper .home-banner-pagination .circle .mask, .home-banner-pagination .circle .fill {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+
+}
+
+.home-banner-pagination .circle .mask {
+    clip: rect(0px, 6rem, 6rem, 2.5rem);
+}
+
+
+
+.home-banner-pagination .circle .mask .fill {
+    clip: rect(0px, 2.5rem, 6rem, 0px);
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+}
+
+.swiper-slide .home-banner-pagination .circle .mask.full,
+.swiper-slide .home-banner-pagination .circle .fill {
+    transform: rotate(0deg);
+}
+
+.swiper-slide.swiper-slide-active .home-banner-pagination .circle .mask.full,
+.swiper-slide.swiper-slide-active .home-banner-pagination .circle .fill {
+    animation: fill ease-in-out 5s infinite;
+    transform: rotate(180deg);
+}
+
+
+@keyframes fill {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+
+}
+.qualityimg{
+    transform: rotate(0deg);
+
+}
+.qualityimg{
+    animation: qualityimg linear  6s infinite;
+    transform: rotate(360deg);
+
+}
+
+@keyframes qualityimg {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.home-banner-pagination .inside-circle {
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
